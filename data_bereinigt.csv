@@ -329,7 +329,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,5,5,5,5,3,5,5,4,2,3,2,1,1,15,3,1,1,4,3,Female,Right,Moderate
 4,2,5,4,3,2,5,4,2,3,4,3,2,2,16,4,3,5,4,1,Female,Right,Moderate
 2,1,3,2,2,1,3,3,3,4,4,1,3,2,16,3,3,2,3,5,Male,Right,Resilient
-4,3,3,4,4,1,4,3,3,2,3,1,5,1,29,3,3,5,5,5,Female,Right,Undercontroller
+4,3,3,4,4,1,4,3,3,2,3,1,5,1,20,3,3,5,5,5,Female,Right,Undercontroller
 5,4,5,5,5,5,5,5,5,5,4,4,2,4,17,2,2,4,3,4,Female,Right,Moderate
 5,3,3,5,4,4,3,4,2,4,2,3,2,5,16,4,1,4,5,2,Male,Right,Overcontroller
 3,2,4,3,4,2,3,4,3,4,2,2,1,3,17,3,2,3,5,2,Female,Right,Undercontroller
@@ -496,7 +496,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,3,4,4,5,3,3,3,3,3,3,3,4,4,21,2,4,4,5,2,Female,Right,Undercontroller
 2,1,2,3,3,1,3,3,1,3,2,4,1,4,33,3,1,2,5,1,Male,Right,Resilient
 3,2,2,4,1,2,5,2,3,2,1,3,1,3,15,2,1,5,2,1,Female,Right,Undercontroller
-4,4,4,3,4,4,4,4,3,4,3,2,1,4,31,1,1,4,4,1,Female,Right,Overcontroller
+4,4,4,3,4,4,4,4,3,4,3,2,1,4,22,1,1,4,4,1,Female,Right,Overcontroller
 3,3,3,4,3,3,4,3,4,4,5,2,4,3,34,3,3,5,3,3,Female,Left,Moderate
 1,1,2,5,2,2,5,1,3,2,1,3,1,3,30,1,2,5,4,3,Female,Right,Resilient
 2,4,4,4,3,4,4,1,2,3,2,1,1,5,18,4,1,5,5,4,Female,Right,Moderate
@@ -645,7 +645,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,4,5,4,3,4,4,1,5,3,5,1,3,2,17,3,4,5,4,5,Female,Both,Moderate
 5,5,5,5,5,5,5,5,1,1,4,1,1,1,21,2,1,2,5,5,Female,Right,Undercontroller
 5,5,5,2,4,4,5,4,5,4,5,4,5,3,22,4,5,5,3,5,Female,Left,Moderate
-5,3,5,5,5,4,5,5,1,1,2,2,1,5,32,4,1,2,1,1,Male,Right,Overcontroller
+5,3,5,5,5,4,5,5,1,1,2,2,1,5,23,4,1,2,1,1,Male,Right,Overcontroller
 2,5,5,4,4,5,5,5,4,5,3,5,1,4,20,2,2,4,5,5,Female,Right,Overcontroller
 1,4,5,1,1,5,4,1,4,4,3,1,5,3,22,3,3,5,1,1,Female,Right,Moderate
 4,3,1,4,2,2,5,1,4,4,3,3,2,3,15,4,1,2,5,3,Male,Right,Undercontroller
@@ -967,7 +967,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,5,4,4,4,4,4,3,3,2,2,2,2,3,19,2,4,4,3,2,Female,Right,Overcontroller
 3,3,4,4,3,4,4,3,4,2,3,2,2,4,44,1,1,5,5,2,Male,Right,Overcontroller
 2,2,2,2,2,3,2,2,5,3,2,3,2,3,22,2,3,5,4,3,Female,Right,Resilient
-4,3,3,4,4,2,4,2,4,3,3,1,5,1,29,2,3,5,4,4,Female,Right,Moderate
+4,3,3,4,4,2,4,2,4,3,3,1,5,1,20,2,3,5,4,4,Female,Right,Moderate
 3,5,4,5,2,5,4,3,3,1,3,4,4,3,33,1,4,5,2,3,Male,Right,Moderate
 4,3,4,4,5,2,5,5,3,3,4,3,2,3,17,4,2,3,4,2,Male,Right,Overcontroller
 5,2,5,5,1,1,5,3,3,4,1,5,1,5,16,5,1,5,5,1,Female,Right,Moderate
@@ -1232,7 +1232,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,3,1,2,3,4,3,5,2,5,3,2,3,23,1,3,4,5,5,Female,Right,Moderate
 4,5,4,4,5,4,4,1,2,2,2,1,1,4,29,1,2,4,5,4,Male,Right,Overcontroller
 2,2,3,3,3,2,4,2,5,3,4,3,4,4,19,1,3,4,4,4,Female,Left,Moderate
-5,1,3,4,2,4,3,2,1,5,3,3,2,4,32,3,1,5,5,1,Male,Right,Moderate
+5,1,3,4,2,4,3,2,1,5,3,3,2,4,23,3,1,5,5,1,Male,Right,Moderate
 2,4,4,3,4,3,5,2,2,2,3,2,3,4,23,2,2,4,5,2,Male,Right,Moderate
 3,3,3,4,3,3,4,3,4,2,4,3,3,3,19,3,4,5,4,4,Female,Right,Moderate
 3,2,3,3,3,2,4,3,4,3,5,2,4,2,36,2,3,3,3,4,Female,Right,Undercontroller
@@ -1378,7 +1378,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,4,5,5,4,4,5,3,1,5,3,1,2,5,18,3,1,5,5,3,Female,Right,Overcontroller
 3,4,4,4,3,3,4,4,3,2,5,2,1,3,39,2,2,5,4,1,Female,Right,Overcontroller
 2,2,2,2,2,2,4,2,4,4,4,5,3,2,26,1,2,4,4,3,Female,Left,Resilient
-1,3,4,5,1,4,3,5,1,2,2,3,1,3,34,3,3,4,5,1,Female,Right,Moderate
+1,3,4,5,1,4,3,5,1,2,2,3,1,3,25,3,3,4,5,1,Female,Right,Moderate
 3,3,1,3,4,2,4,1,3,5,3,3,2,4,22,3,4,5,5,1,Female,Right,Resilient
 3,3,3,5,3,4,5,1,2,3,2,1,3,3,22,2,3,5,5,3,Male,Right,Moderate
 3,3,3,3,3,3,3,1,5,3,5,3,3,1,29,1,1,5,3,3,Female,Right,Moderate
@@ -1397,7 +1397,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,4,4,4,4,3,3,3,4,4,4,3,2,4,43,2,3,4,2,4,Female,Right,Moderate
 1,1,2,4,3,2,4,3,5,2,5,2,5,1,41,1,4,3,1,5,Male,Right,Moderate
 1,1,2,2,2,4,5,2,3,3,4,2,2,2,17,1,2,5,3,2,Male,Right,Resilient
-3,3,2,2,3,3,3,3,2,2,4,3,1,3,38,3,1,3,3,1,Female,Right,Undercontroller
+3,3,2,2,3,3,3,3,2,2,4,3,1,3,29,3,1,3,3,1,Female,Right,Undercontroller
 5,3,4,5,5,5,5,4,5,3,3,1,3,3,17,5,3,5,5,2,Female,Left,Moderate
 1,1,1,1,1,1,4,1,5,3,5,5,5,1,49,1,5,4,1,4,Female,Right,Resilient
 2,1,2,4,4,2,2,1,4,4,2,4,3,3,17,3,2,4,5,2,Female,Right,Resilient
@@ -1491,7 +1491,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,3,3,4,3,3,3,2,3,3,3,2,4,17,3,2,3,5,2,Female,Right,Moderate
 1,1,1,1,1,1,5,5,5,2,5,5,1,2,22,1,2,5,5,5,Male,Right,Resilient
 3,3,2,3,2,3,3,2,4,3,4,3,4,2,32,2,3,4,2,3,Female,Right,Moderate
-3,2,2,3,4,2,4,5,3,3,2,2,2,3,36,2,3,5,5,3,Female,Right,Undercontroller
+3,2,2,3,4,2,4,5,3,3,2,2,2,3,27,2,3,5,5,3,Female,Right,Undercontroller
 3,4,4,3,4,3,3,3,4,4,4,3,4,3,19,4,4,4,3,4,Male,Right,Undercontroller
 2,1,3,4,3,4,4,5,3,3,4,3,3,3,16,2,3,2,5,3,Male,Right,Moderate
 3,2,2,3,3,2,4,4,4,4,4,4,4,2,22,3,4,5,3,4,Female,Left,Moderate
@@ -1641,7 +1641,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,5,5,5,3,5,4,2,2,3,3,5,3,3,15,4,3,2,5,1,Female,Right,Overcontroller
 3,3,3,3,4,4,4,3,3,3,4,2,3,3,20,3,3,3,4,4,Female,Right,Moderate
 2,1,3,2,3,1,4,2,5,2,5,1,5,1,14,1,4,3,2,4,Female,Right,Moderate
-2,1,3,2,4,2,3,2,2,4,4,2,2,3,27,2,3,3,5,4,Male,Right,Resilient
+2,1,3,2,4,2,3,2,2,4,4,2,2,3,18,2,3,3,5,4,Male,Right,Resilient
 5,5,5,5,4,4,5,3,1,1,1,4,1,5,15,4,1,2,5,1,Female,Right,Overcontroller
 1,1,1,1,2,1,2,1,5,3,4,5,3,1,15,1,3,4,2,5,Male,Right,Resilient
 4,3,3,3,3,3,3,3,3,4,4,2,5,3,21,2,3,4,4,4,Female,Right,Moderate
@@ -1676,7 +1676,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,3,3,2,2,4,2,5,4,5,4,5,3,24,2,4,4,3,5,Female,Right,Resilient
 3,2,5,3,4,1,3,1,5,4,4,3,5,3,21,2,4,4,5,5,Male,Right,Moderate
 3,3,4,4,4,3,4,4,5,2,5,4,5,1,19,2,4,4,1,5,Female,Right,Moderate
-1,1,1,1,3,5,5,3,5,2,5,1,5,1,29,4,4,3,3,3,Male,Right,Moderate
+1,1,1,1,3,5,5,3,5,2,5,1,5,1,20,4,4,3,3,3,Male,Right,Moderate
 2,1,2,2,1,1,4,2,5,4,5,4,5,1,26,2,5,4,1,4,Female,Right,Resilient
 3,3,3,4,4,3,5,5,1,1,3,1,1,3,21,3,1,3,3,1,Male,Right,Overcontroller
 5,5,5,5,5,5,5,5,1,1,3,1,2,4,42,3,1,5,3,3,Female,Right,Overcontroller
@@ -2091,7 +2091,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,5,5,5,2,5,5,2,1,1,1,1,1,5,24,2,1,5,5,1,Female,Right,Overcontroller
 3,5,5,5,5,2,4,5,2,3,3,3,1,5,15,2,1,4,5,2,Male,Right,Overcontroller
 5,5,4,5,4,5,5,3,1,1,1,1,1,5,41,3,1,5,5,1,Female,Right,Overcontroller
-5,5,1,5,1,3,1,1,2,1,1,3,1,3,34,3,1,1,3,1,Female,Right,Undercontroller
+5,5,1,5,1,3,1,1,2,1,1,3,1,3,25,3,1,1,3,1,Female,Right,Undercontroller
 5,2,2,5,3,5,5,3,1,2,1,1,1,5,20,3,1,5,5,1,Female,Right,Overcontroller
 5,4,4,5,4,5,5,4,3,2,2,1,4,4,18,2,3,2,5,2,Female,Right,Overcontroller
 5,2,4,5,5,4,5,4,3,3,4,2,4,4,17,5,1,5,3,2,Female,Right,Moderate
@@ -2490,7 +2490,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,2,3,2,3,2,3,1,3,4,3,3,3,2,20,2,2,5,2,3,Female,Right,Resilient
 2,2,2,4,2,4,2,2,2,4,4,2,2,4,49,2,1,4,2,1,Male,Right,Resilient
 4,5,5,2,5,5,5,5,4,4,5,5,5,5,21,1,5,5,4,4,Male,Right,Moderate
-2,3,4,3,3,3,3,4,4,3,3,1,2,3,32,3,1,3,2,1,Male,Right,Moderate
+2,3,4,3,3,3,3,4,4,3,3,1,2,3,23,3,1,3,2,1,Male,Right,Moderate
 4,4,4,3,4,3,3,2,4,1,4,2,4,2,20,2,4,3,3,3,Female,Right,Moderate
 1,1,1,1,1,1,4,4,2,5,4,5,3,4,21,1,3,5,5,3,Female,Both,Resilient
 1,1,3,1,1,1,1,4,5,5,4,4,4,2,16,2,3,4,1,5,Male,Right,Resilient
@@ -2987,7 +2987,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,3,2,1,2,3,3,4,3,4,3,5,3,34,2,4,5,2,5,Female,Right,Resilient
 3,3,3,3,3,3,4,3,2,3,3,3,2,4,21,2,2,4,4,3,Female,Right,Moderate
 5,5,5,5,5,5,5,5,2,1,1,1,3,4,17,5,3,5,5,1,Male,Right,Overcontroller
-2,3,2,2,2,4,5,5,5,1,3,4,3,3,37,2,3,4,2,5,Female,Right,Moderate
+2,3,2,2,2,4,5,5,5,1,3,4,3,3,28,2,3,4,2,5,Female,Right,Moderate
 2,2,2,2,4,2,4,2,5,4,5,4,4,2,50,2,4,5,4,4,Male,Right,Resilient
 4,2,5,3,2,3,3,4,2,3,4,3,2,2,24,1,3,4,4,4,Male,Right,Moderate
 3,4,3,4,5,5,4,5,5,4,5,5,5,4,30,4,1,3,5,5,Male,Right,Undercontroller
@@ -3000,7 +3000,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,2,4,2,4,2,4,1,3,4,4,4,4,4,33,1,3,4,1,5,Male,Right,Resilient
 3,3,3,4,5,4,5,1,3,5,2,2,2,4,40,4,3,3,5,4,Male,Right,Moderate
 2,3,3,4,3,3,4,3,3,4,3,4,2,3,30,3,3,4,4,1,Male,Right,Moderate
-5,2,5,2,5,2,5,3,4,4,3,4,3,3,29,2,2,4,3,5,Female,Right,Moderate
+5,2,5,2,5,2,5,3,4,4,3,4,3,3,20,2,2,4,3,5,Female,Right,Moderate
 1,1,1,1,1,1,1,1,5,5,5,1,5,1,21,1,5,5,1,5,Female,Right,Resilient
 2,1,1,2,2,1,2,4,4,4,4,4,2,4,18,2,2,4,5,2,Male,Right,Resilient
 1,1,1,1,2,1,4,1,5,3,3,5,3,1,34,1,4,4,2,3,Male,Right,Resilient
@@ -3660,12 +3660,12 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,5,5,5,5,3,5,4,1,4,3,4,1,4,17,1,2,2,5,1,Female,Right,Overcontroller
 3,1,4,1,1,1,5,4,1,4,2,4,2,5,16,2,1,5,5,1,Male,Right,Resilient
 2,2,4,3,2,4,4,4,3,4,2,3,1,5,17,3,3,4,4,4,Male,Right,Undercontroller
-2,1,3,2,1,1,2,4,5,5,5,2,2,3,42,1,1,5,3,5,Female,Left,Resilient
+2,1,3,2,1,1,2,4,5,5,5,2,2,3,33,1,1,5,3,5,Female,Left,Resilient
 3,3,4,3,3,5,4,3,5,3,4,1,2,2,16,2,5,5,3,4,Female,Right,Moderate
 5,2,3,5,5,3,5,5,4,2,5,1,5,3,17,2,2,3,5,2,Female,Right,Moderate
 3,3,4,3,5,3,3,2,4,4,4,2,3,3,17,2,3,5,5,4,Female,Right,Moderate
 2,1,2,1,3,1,3,1,3,5,2,1,1,4,17,3,4,4,5,4,Male,Left,Resilient
-5,5,3,5,5,5,5,5,1,2,3,5,2,5,32,4,5,3,5,1,Female,Right,Overcontroller
+5,5,3,5,5,5,5,5,1,2,3,5,2,5,23,4,5,3,5,1,Female,Right,Overcontroller
 4,3,5,4,3,4,4,3,2,3,1,2,1,4,17,5,1,5,5,3,Male,Right,Overcontroller
 5,5,5,5,5,5,4,4,2,2,4,5,2,1,17,3,4,3,3,4,Female,Right,Undercontroller
 2,1,2,3,2,1,5,2,5,2,5,1,5,2,17,1,2,5,2,5,Female,Right,Moderate
@@ -4478,7 +4478,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,5,5,2,4,2,3,3,5,4,4,2,5,3,26,4,5,4,2,5,Male,Right,Moderate
 4,5,5,5,5,3,5,5,3,3,4,3,3,1,14,3,3,3,1,5,Female,Right,Moderate
 4,4,3,3,2,1,4,2,4,3,4,4,1,3,39,1,2,4,4,4,Female,Right,Moderate
-2,2,1,1,3,1,1,3,3,2,3,2,4,3,33,4,3,2,3,2,Female,Left,Resilient
+2,2,1,1,3,1,1,3,3,2,3,2,4,3,24,4,3,2,3,2,Female,Left,Resilient
 2,2,2,4,2,2,4,3,4,4,4,4,3,2,17,2,3,4,3,4,Female,Right,Resilient
 3,4,4,3,2,3,4,2,3,5,4,3,2,1,16,3,2,5,5,4,Female,Right,Moderate
 3,1,1,2,3,1,3,4,4,4,5,1,5,2,17,2,5,4,3,5,Female,Right,Resilient
@@ -4519,7 +4519,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,2,3,2,1,5,5,4,1,5,1,3,1,5,14,1,3,3,5,1,Male,Right,Moderate
 4,3,3,5,4,3,3,4,3,3,2,3,3,3,30,3,5,4,3,1,Male,Right,Undercontroller
 4,4,3,3,4,2,4,2,3,3,4,2,4,3,19,1,3,4,4,2,Female,Right,Moderate
-5,5,5,5,5,5,5,1,5,1,5,5,5,5,34,1,1,5,5,5,Female,Right,Moderate
+5,5,5,5,5,5,5,1,5,1,5,5,5,5,25,1,1,5,5,5,Female,Right,Moderate
 4,3,5,3,4,2,4,4,5,3,5,1,4,1,17,4,4,5,1,5,Female,Left,Moderate
 2,2,2,3,2,2,4,2,4,4,4,4,4,4,29,3,3,4,4,4,Male,Right,Resilient
 4,4,4,4,4,4,4,4,4,2,3,3,3,3,38,4,2,4,3,3,Female,Right,Undercontroller
@@ -4764,7 +4764,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,5,5,5,5,5,5,5,4,3,4,1,3,3,38,3,3,5,5,2,Female,Right,Moderate
 5,1,1,5,1,5,5,1,1,5,5,5,5,5,37,5,5,5,1,5,Female,Right,Resilient
 4,4,4,3,4,3,4,5,4,3,2,2,1,3,28,1,1,5,3,1,Female,Right,Overcontroller
-3,2,2,2,4,2,3,4,4,3,3,4,2,2,32,3,3,4,4,4,Male,Right,Undercontroller
+3,2,2,2,4,2,3,4,4,3,3,4,2,2,23,3,3,4,4,4,Male,Right,Undercontroller
 3,2,3,4,3,3,5,4,3,2,3,2,1,4,56,1,1,4,3,2,Female,Right,Moderate
 3,5,4,5,4,4,5,3,3,2,3,2,3,3,30,3,3,4,3,3,Male,Right,Moderate
 1,3,3,4,5,2,1,2,5,5,5,1,5,2,54,1,4,4,1,4,Male,Right,Moderate
@@ -5050,7 +5050,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,2,3,4,3,2,4,3,3,2,3,2,2,2,40,1,3,3,3,4,Female,Right,Moderate
 3,5,5,5,5,5,5,1,1,1,1,1,1,5,15,5,1,5,3,3,Female,Right,Overcontroller
 1,2,3,2,4,1,1,3,3,4,3,3,4,3,37,2,5,2,5,4,Male,Right,Resilient
-2,2,2,3,2,2,3,2,3,5,2,3,1,4,30,3,2,3,5,2,Male,Right,Resilient
+2,2,2,3,2,2,3,2,3,5,2,3,1,4,21,3,2,3,5,2,Male,Right,Resilient
 4,4,5,3,4,3,4,2,2,3,1,2,1,5,17,5,1,5,5,1,Female,Right,Overcontroller
 1,3,1,1,1,1,1,1,5,5,5,2,5,2,17,3,3,4,2,4,Male,Right,Resilient
 1,1,1,1,4,1,1,2,4,5,4,5,4,3,17,2,1,4,3,4,Male,Right,Resilient
@@ -5113,7 +5113,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,3,4,3,2,4,3,4,3,4,3,5,2,16,3,3,4,2,4,Female,Right,Undercontroller
 3,1,1,5,2,1,5,2,3,1,4,1,5,5,16,1,3,5,5,1,Female,Right,Moderate
 4,3,3,4,3,4,4,1,2,2,2,1,2,4,28,2,1,3,5,1,Female,Right,Moderate
-5,5,5,5,5,5,5,5,2,2,3,3,2,3,30,4,3,2,4,5,Female,Right,Undercontroller
+5,5,5,5,5,5,5,5,2,2,3,3,2,3,21,4,3,2,4,5,Female,Right,Undercontroller
 5,4,4,4,4,4,5,4,4,3,4,3,3,2,17,3,4,4,3,4,Male,Right,Moderate
 1,2,2,2,2,3,4,3,4,4,3,3,2,3,17,2,2,4,4,4,Male,Right,Resilient
 3,3,3,4,3,3,4,5,3,2,4,2,1,4,25,2,3,5,4,4,Male,Right,Moderate
@@ -5741,7 +5741,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,4,4,5,5,4,5,3,4,5,5,3,2,2,16,2,3,5,3,4,Female,Right,Moderate
 5,4,4,5,5,3,4,4,3,2,4,4,3,4,20,4,2,4,5,4,Female,Right,Undercontroller
 5,5,5,5,1,3,5,4,4,4,5,4,4,1,19,3,5,3,2,2,Female,Right,Undercontroller
-5,5,5,5,5,3,5,5,4,4,4,3,1,1,44,2,5,5,5,5,Female,Right,Undercontroller
+5,5,5,5,5,3,5,5,4,4,4,3,1,1,35,2,5,5,5,5,Female,Right,Undercontroller
 2,2,2,2,2,2,3,2,2,4,2,3,2,4,24,2,2,3,4,3,Male,Right,Resilient
 4,1,2,4,1,4,4,4,4,2,5,2,3,2,58,4,2,5,3,3,Female,Right,Moderate
 3,5,5,2,2,2,5,5,5,4,5,4,5,1,21,3,3,5,2,5,Female,Right,Moderate
@@ -5894,7 +5894,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,1,1,2,2,2,4,2,5,5,3,3,2,2,36,1,1,5,2,5,Male,Right,Resilient
 3,4,2,3,3,4,3,3,4,3,4,4,4,4,21,4,2,4,3,4,Female,Right,Moderate
 3,4,5,3,3,4,3,4,1,3,1,4,1,5,24,4,1,5,5,1,Female,Left,Moderate
-1,3,4,3,2,1,4,3,3,2,4,5,3,3,31,1,3,5,4,5,Female,Right,Resilient
+1,3,4,3,2,1,4,3,3,2,4,5,3,3,22,1,3,5,4,5,Female,Right,Resilient
 4,3,5,4,5,4,5,4,3,2,3,2,1,3,38,3,2,4,5,3,Female,Right,Moderate
 2,2,4,4,2,2,2,3,3,5,4,5,3,3,23,3,3,5,4,2,Female,Right,Resilient
 1,4,4,4,1,2,4,2,3,3,2,4,3,4,26,2,1,5,3,1,Female,Right,Moderate
@@ -6180,7 +6180,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,3,3,3,4,2,3,4,3,4,3,4,3,3,20,4,2,4,4,2,Female,Right,Undercontroller
 2,4,2,4,2,4,4,4,2,3,2,2,1,4,16,2,1,5,5,5,Female,Right,Moderate
 1,3,2,1,1,1,3,1,5,4,4,2,5,2,23,3,3,3,3,5,Female,Right,Resilient
-3,4,5,2,4,5,3,2,2,5,1,5,1,3,35,4,1,5,5,2,Female,Right,Moderate
+3,4,5,2,4,5,3,2,2,5,1,5,1,3,26,4,1,5,5,2,Female,Right,Moderate
 4,4,5,5,4,2,5,4,2,2,3,2,3,5,21,2,3,4,5,2,Female,Right,Overcontroller
 2,2,2,2,3,3,4,3,2,4,1,2,2,2,21,3,1,4,4,5,Male,Right,Undercontroller
 3,3,4,3,3,1,3,3,5,3,5,5,5,1,49,3,4,4,1,5,Female,Right,Moderate
@@ -6573,7 +6573,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,3,2,3,2,3,2,2,4,2,3,1,3,32,1,2,4,5,4,Male,Right,Resilient
 1,1,4,4,1,3,4,1,5,5,4,3,2,3,21,1,1,5,3,2,Male,Right,Resilient
 5,3,4,5,4,3,2,3,3,4,1,2,2,5,30,4,2,5,5,4,Male,Right,Undercontroller
-4,3,1,3,2,3,3,2,3,2,3,3,2,2,28,2,4,3,2,2,Female,Right,Moderate
+4,3,1,3,2,3,3,2,3,2,3,3,2,2,19,2,4,3,2,2,Female,Right,Moderate
 3,2,2,1,4,1,1,1,3,5,4,4,5,4,18,4,4,5,3,3,Male,Right,Resilient
 1,1,2,2,1,1,3,1,5,5,5,2,4,1,29,2,3,4,2,4,Male,Left,Resilient
 3,2,1,1,2,2,1,1,4,3,4,3,3,3,22,2,4,5,2,4,Female,Right,Resilient
@@ -6921,7 +6921,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,3,3,2,3,2,4,3,4,4,4,3,4,2,19,4,4,4,3,4,Female,Right,Undercontroller
 2,1,3,4,2,4,4,2,4,3,4,2,4,3,32,2,3,4,3,3,Female,Right,Moderate
 2,4,4,2,2,2,4,2,2,4,4,4,1,4,20,4,2,4,4,1,Male,Right,Resilient
-3,3,3,3,5,5,5,3,4,3,4,4,3,3,34,4,3,4,5,4,Female,Left,Moderate
+3,3,3,3,5,5,5,3,4,3,4,4,3,3,25,4,3,4,5,4,Female,Left,Moderate
 2,2,1,2,2,2,4,4,3,5,3,4,4,4,20,5,4,5,5,2,Female,Right,Resilient
 5,4,3,2,4,4,4,4,3,5,2,5,2,3,22,3,3,5,4,2,Male,Right,Undercontroller
 4,5,5,2,4,3,5,4,5,4,5,4,4,2,36,3,3,4,2,4,Female,Right,Moderate
@@ -7702,7 +7702,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,4,4,4,2,2,5,1,3,2,4,3,5,3,48,1,3,4,3,5,Female,Right,Moderate
 4,2,4,5,4,4,5,4,2,1,3,2,1,4,20,4,1,4,5,1,Male,Right,Overcontroller
 4,1,3,4,4,3,5,3,3,3,3,3,2,3,38,2,2,3,4,4,Female,Right,Moderate
-2,2,1,4,4,3,4,1,2,2,4,2,1,4,31,1,2,2,4,1,Female,Right,Moderate
+2,2,1,4,4,3,4,1,2,2,4,2,1,4,22,1,2,2,4,1,Female,Right,Moderate
 4,2,2,4,4,2,5,4,4,3,5,4,3,2,28,3,2,5,2,2,Female,Right,Moderate
 2,5,5,4,2,4,5,4,5,5,4,2,3,4,18,4,1,5,4,3,Female,Right,Moderate
 4,4,4,2,4,2,5,4,4,4,3,4,2,3,29,4,2,3,2,2,Male,Right,Moderate
@@ -7942,7 +7942,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,3,3,3,5,5,5,5,4,4,3,1,4,3,20,2,2,3,4,3,Female,Both,Moderate
 5,5,5,5,5,3,5,4,2,2,3,3,3,2,16,5,5,4,3,5,Female,Right,Undercontroller
 3,2,3,4,3,3,4,3,3,4,3,2,1,4,68,2,1,4,5,1,Female,Left,Moderate
-3,2,1,4,4,3,3,3,4,2,3,3,2,3,65,1,3,3,5,4,Female,Right,Moderate
+3,2,1,4,4,3,3,3,4,2,3,3,2,3,56,1,3,3,5,4,Female,Right,Moderate
 4,4,4,4,4,4,5,2,4,3,5,2,1,5,16,4,1,5,2,2,Male,Right,Moderate
 3,3,5,2,4,4,4,4,4,3,3,1,4,2,16,5,4,4,4,5,Male,Right,Undercontroller
 4,2,4,4,3,4,5,3,4,3,2,4,1,3,26,2,3,3,4,4,Female,Right,Undercontroller
@@ -8084,7 +8084,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,1,1,3,2,1,4,3,2,3,4,1,1,4,15,3,1,5,3,1,Female,Right,Resilient
 4,2,4,4,4,1,4,4,5,2,5,4,5,1,29,2,5,5,2,5,Female,Right,Moderate
 2,2,2,4,2,1,4,2,3,3,2,4,4,4,29,3,3,2,4,2,Female,Right,Resilient
-3,3,3,4,5,3,4,4,2,3,2,3,1,2,37,1,3,4,5,2,Other,Right,Undercontroller
+3,3,3,4,5,3,4,4,2,3,2,3,1,2,28,1,3,4,5,2,Other,Right,Undercontroller
 4,4,4,4,4,5,4,4,3,2,3,1,2,2,23,4,4,4,5,4,Female,Right,Undercontroller
 3,2,4,4,3,3,4,3,2,3,4,2,2,3,22,4,2,4,4,4,Female,Right,Moderate
 1,1,1,2,3,1,3,1,5,5,5,1,5,2,15,2,5,4,2,5,Male,Right,Resilient
@@ -8117,7 +8117,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,2,2,3,5,2,3,5,4,4,3,2,5,3,14,4,2,2,5,5,Female,Right,Undercontroller
 3,3,3,4,4,2,5,4,4,3,3,3,3,3,15,4,3,4,3,4,Female,Right,Undercontroller
 1,1,1,1,1,1,2,2,5,5,5,1,5,3,14,1,5,1,1,1,Female,Right,Resilient
-2,5,4,4,4,3,3,2,4,2,5,3,5,1,37,4,3,4,1,3,Female,Right,Moderate
+2,5,4,4,4,3,3,2,4,2,5,3,5,1,28,4,3,4,1,3,Female,Right,Moderate
 4,3,5,2,5,4,5,5,5,5,5,2,3,2,15,1,3,4,5,4,Female,Right,Moderate
 3,3,3,3,3,4,4,3,4,3,3,2,2,4,35,3,2,4,4,3,Female,Right,Moderate
 5,4,5,2,4,3,5,3,3,2,5,3,3,4,24,2,3,4,2,2,Female,Left,Undercontroller
@@ -9344,7 +9344,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,3,4,4,2,4,4,3,4,1,4,2,4,4,22,1,3,4,3,4,Male,Right,Moderate
 3,3,4,3,4,4,4,3,3,3,5,2,4,2,24,3,3,4,2,4,Female,Left,Undercontroller
 5,5,5,5,2,5,5,5,2,4,1,5,1,4,21,5,1,5,5,2,Female,Right,Overcontroller
-1,3,5,3,3,1,5,3,5,3,4,5,3,5,40,1,4,5,5,5,Female,Right,Moderate
+1,3,5,3,3,1,5,3,5,3,4,5,3,5,31,1,4,5,5,5,Female,Right,Moderate
 3,3,3,4,2,4,4,2,3,4,3,4,1,3,29,1,2,3,5,2,Female,Right,Moderate
 2,5,5,3,3,3,5,1,5,4,4,1,5,2,20,4,1,5,5,1,Female,Left,Moderate
 3,3,3,5,4,5,5,5,3,2,2,4,4,4,16,3,2,1,3,1,Female,Right,Overcontroller
@@ -9704,7 +9704,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,2,2,3,3,3,3,2,3,3,2,2,1,5,28,3,1,5,5,1,Female,Right,Moderate
 3,1,2,5,3,1,2,5,2,2,2,5,1,4,54,1,1,4,5,1,Female,Right,Moderate
 3,3,3,3,4,1,4,3,5,4,5,5,4,3,44,3,3,5,3,4,Female,Right,Moderate
-5,1,1,1,1,1,3,1,5,5,4,5,4,3,50,1,4,3,4,4,Female,Right,Resilient
+5,1,1,1,1,1,3,1,5,5,4,5,4,3,41,1,4,3,4,4,Female,Right,Resilient
 2,1,1,2,1,1,5,1,5,3,5,4,3,1,24,4,3,4,3,1,Female,Right,Resilient
 3,3,4,3,4,2,3,1,2,4,3,3,2,4,28,2,4,4,5,1,Female,Right,Moderate
 1,1,1,2,1,1,1,1,4,5,3,1,2,3,18,1,1,5,5,2,Male,Right,Resilient
@@ -9843,7 +9843,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,5,4,4,2,5,2,2,4,4,5,5,5,5,19,2,5,5,2,3,Male,Both,Moderate
 3,5,5,1,5,3,5,4,3,4,3,3,1,4,18,3,5,5,5,5,Male,Right,Moderate
 3,3,3,4,4,2,4,3,5,2,2,3,2,3,32,3,2,3,5,4,Female,Left,Moderate
-4,3,3,3,2,3,4,4,2,3,2,4,2,4,33,3,2,3,4,2,Female,Right,Undercontroller
+4,3,3,3,2,3,4,4,2,3,2,4,2,4,24,3,2,3,4,2,Female,Right,Undercontroller
 2,2,2,4,4,1,2,2,2,5,1,5,1,4,49,2,1,2,4,4,Male,Right,Resilient
 4,3,4,2,5,3,3,5,4,2,2,3,2,3,36,4,2,4,4,5,Male,Right,Undercontroller
 5,5,5,5,5,4,5,2,5,2,5,1,5,3,37,1,3,5,3,4,Female,Right,Moderate
@@ -10021,7 +10021,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,4,3,2,1,3,4,3,3,3,4,2,2,3,16,4,3,5,4,3,Female,Right,Moderate
 2,5,5,2,4,4,1,1,5,4,5,2,5,1,16,4,5,2,3,4,Female,Both,Undercontroller
 5,1,1,5,4,5,5,5,5,4,5,5,5,5,15,4,3,5,4,5,Female,Left,Moderate
-2,3,3,5,2,1,3,4,5,2,2,1,3,3,40,1,4,5,3,4,Male,Right,Moderate
+2,3,3,5,2,1,3,4,5,2,2,1,3,3,31,1,4,5,3,4,Male,Right,Moderate
 5,5,5,5,5,1,5,4,1,1,1,1,1,5,19,1,1,5,1,1,Female,Right,Overcontroller
 2,1,1,1,2,1,2,2,4,4,5,4,5,1,60,1,3,4,1,5,Male,Right,Resilient
 2,1,2,2,2,2,2,1,4,4,2,4,2,4,18,4,3,4,4,4,Male,Right,Resilient
@@ -10058,7 +10058,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,2,2,2,2,3,2,2,3,4,2,2,4,23,1,2,4,2,2,Female,Right,Resilient
 3,3,3,5,3,2,4,3,4,2,4,3,2,4,23,3,2,4,4,2,Female,Right,Moderate
 3,5,5,5,5,5,5,3,2,2,1,5,4,2,22,2,5,2,5,2,Female,Right,Overcontroller
-5,3,5,4,5,5,5,5,4,3,3,5,1,3,35,2,1,5,5,5,Female,Right,Moderate
+5,3,5,4,5,5,5,5,4,3,3,5,1,3,26,2,1,5,5,5,Female,Right,Moderate
 2,4,4,3,2,2,3,2,5,3,4,3,4,5,34,3,3,5,2,4,Male,Left,Moderate
 4,5,5,3,4,3,4,3,3,2,3,3,2,3,20,3,5,4,3,3,Female,Right,Undercontroller
 3,1,1,3,2,1,4,3,4,3,4,3,4,2,18,3,3,4,2,1,Female,Right,Resilient
@@ -10168,7 +10168,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,1,2,3,1,1,4,2,4,3,4,4,4,1,29,1,4,3,2,4,Female,Left,Resilient
 3,3,3,4,1,5,5,2,4,1,3,1,1,4,24,4,1,3,5,4,Male,Right,Overcontroller
 1,2,3,1,4,2,5,3,1,4,1,2,1,5,50,1,2,1,5,1,Male,Right,Moderate
-5,5,5,5,5,5,5,4,5,3,4,1,5,3,49,1,3,3,5,5,Female,Right,Moderate
+5,5,5,5,5,5,5,4,5,3,4,1,5,3,40,1,3,3,5,5,Female,Right,Moderate
 2,2,3,3,3,3,4,3,3,1,2,3,1,4,33,1,1,3,4,1,Male,Right,Moderate
 3,5,5,5,4,5,5,4,1,2,2,1,2,3,23,2,2,5,5,2,Female,Right,Overcontroller
 4,5,5,4,5,3,4,5,3,2,4,3,4,2,22,4,2,4,4,3,Male,Right,Undercontroller
@@ -10639,12 +10639,12 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,5,1,1,1,1,1,1,5,5,5,5,5,1,14,1,5,5,1,5,Male,Right,Resilient
 2,3,4,4,4,1,4,5,3,4,2,4,3,3,15,5,3,2,5,2,Male,Right,Undercontroller
 2,2,2,2,1,2,4,2,4,5,3,2,3,3,30,2,3,5,4,2,Male,Right,Resilient
-1,1,1,2,1,1,1,1,1,3,5,1,1,1,26,1,5,1,1,5,Male,Right,Resilient
+1,1,1,2,1,1,1,1,1,3,5,1,1,1,17,1,5,1,1,5,Male,Right,Resilient
 3,1,4,4,4,3,3,1,4,3,3,2,2,3,43,3,3,3,4,5,Male,Right,Undercontroller
 1,2,2,3,5,2,3,2,5,4,4,1,4,1,19,1,4,4,2,5,Male,Right,Moderate
 4,4,4,4,4,4,4,4,2,3,4,4,3,3,21,2,1,4,4,4,Male,Right,Moderate
 3,5,5,5,1,5,5,4,1,3,3,1,1,5,18,3,3,5,5,1,Female,Right,Overcontroller
-2,2,3,3,2,3,3,3,3,3,3,2,3,3,31,3,2,3,4,2,Female,Right,Undercontroller
+2,2,3,3,2,3,3,3,3,3,3,2,3,3,22,3,2,3,4,2,Female,Right,Undercontroller
 1,3,1,5,5,3,1,4,5,3,3,3,1,3,15,3,1,3,4,1,Male,Right,Undercontroller
 1,5,3,1,5,1,2,5,5,5,5,1,4,1,16,4,4,2,4,5,Male,Right,Moderate
 2,1,2,3,4,2,1,5,3,3,4,3,3,4,15,5,3,1,5,1,Male,Right,Resilient
@@ -10855,7 +10855,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,4,5,1,4,5,4,3,4,5,4,5,2,4,26,3,3,5,2,2,Male,Right,Moderate
 5,5,5,3,3,3,5,3,2,3,3,3,1,5,24,2,4,3,4,2,Male,Right,Moderate
 4,5,4,4,3,4,5,1,1,1,5,3,5,4,22,3,5,4,5,5,Male,Right,Moderate
-5,5,3,5,5,5,5,3,1,1,5,1,1,1,44,5,1,5,1,3,Female,Right,Moderate
+5,5,3,5,5,5,5,3,1,1,5,1,1,1,35,5,1,5,1,3,Female,Right,Moderate
 3,3,5,4,4,3,3,4,2,1,2,2,2,2,15,3,2,3,5,1,Female,Right,Undercontroller
 2,1,2,1,2,2,3,3,4,4,4,3,4,2,19,4,3,4,4,3,Male,Right,Resilient
 1,1,2,3,1,3,3,5,4,3,5,1,5,3,30,1,3,5,3,3,Female,Right,Moderate
@@ -10864,7 +10864,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,4,4,2,3,3,4,4,4,4,4,5,3,3,21,3,3,3,2,3,Male,Both,Moderate
 4,4,4,5,4,3,3,4,3,3,3,2,3,4,22,3,2,4,3,3,Female,Left,Moderate
 4,4,4,5,4,4,5,4,2,3,3,2,1,4,51,4,2,5,4,2,Male,Right,Overcontroller
-3,5,5,4,5,4,2,5,5,3,4,3,2,3,33,1,2,5,5,2,Female,Right,Moderate
+3,5,5,4,5,4,2,5,5,3,4,3,2,3,24,1,2,5,5,2,Female,Right,Moderate
 3,4,4,2,4,2,4,3,4,4,4,3,4,3,26,2,2,3,2,3,Female,Right,Moderate
 5,5,5,4,2,5,5,5,2,2,2,5,3,5,19,1,3,5,3,3,Male,Right,Overcontroller
 2,2,4,2,2,3,4,2,2,4,2,3,1,3,15,4,2,3,5,2,Female,Right,Resilient
@@ -11670,7 +11670,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,5,5,4,2,3,5,2,4,2,2,3,3,4,18,2,2,5,5,3,Female,Right,Moderate
 3,2,2,3,3,2,4,2,3,3,5,1,3,5,45,1,2,5,4,3,Female,Right,Moderate
 2,4,4,4,4,4,4,2,4,2,4,2,4,2,30,2,4,5,4,4,Female,Right,Moderate
-3,2,2,5,3,1,3,2,4,3,4,2,2,4,52,2,2,5,3,3,Female,Right,Moderate
+3,2,2,5,3,1,3,2,4,3,4,2,2,4,43,2,2,5,3,3,Female,Right,Moderate
 5,5,5,5,5,3,5,5,5,4,5,3,5,3,15,4,5,5,3,5,Female,Right,Moderate
 5,5,5,5,5,5,5,5,5,4,5,1,2,2,15,2,3,3,4,5,Female,Right,Moderate
 3,4,4,4,3,3,5,3,3,3,3,3,3,4,14,3,2,5,5,3,Female,Right,Moderate
@@ -12065,7 +12065,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,1,1,4,2,1,4,3,4,4,4,2,3,3,43,4,3,5,3,3,Female,Right,Resilient
 1,1,2,1,1,1,2,1,4,4,5,5,3,3,27,2,2,4,2,5,Male,Right,Resilient
 2,1,1,3,2,1,3,3,4,4,3,4,4,3,38,2,3,4,4,3,Female,Right,Resilient
-1,1,1,3,3,1,3,3,5,4,4,5,5,1,41,1,4,5,5,5,Female,Right,Resilient
+1,1,1,3,3,1,3,3,5,4,4,5,5,1,32,1,4,5,5,5,Female,Right,Resilient
 3,2,1,4,3,3,4,2,2,4,3,3,1,5,35,1,1,3,5,1,Female,Right,Moderate
 1,2,2,1,3,2,1,2,2,4,1,4,1,2,20,1,3,1,4,4,Male,Right,Resilient
 5,1,1,5,5,5,5,2,1,1,2,1,1,5,17,3,1,5,5,1,Female,Right,Overcontroller
@@ -12262,7 +12262,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,1,5,1,5,1,5,1,5,5,5,1,5,5,24,5,5,5,1,5,Female,Right,Resilient
 2,1,2,3,1,2,5,2,3,3,4,3,3,3,45,1,2,4,3,3,Female,Right,Resilient
 3,4,4,3,3,2,4,3,4,2,3,2,1,5,28,3,3,4,5,4,Female,Left,Moderate
-3,2,2,3,3,2,3,3,3,3,3,3,1,3,30,4,1,5,1,2,Female,Right,Undercontroller
+3,2,2,3,3,2,3,3,3,3,3,3,1,3,21,4,1,5,1,2,Female,Right,Undercontroller
 2,1,1,4,2,1,4,2,4,2,5,3,5,1,16,1,4,5,2,2,Female,Right,Resilient
 5,1,2,5,2,2,5,3,3,5,3,3,5,3,16,2,1,5,5,1,Female,Right,Moderate
 2,3,3,5,2,2,5,2,3,3,2,3,1,4,17,2,1,5,3,3,Female,Right,Moderate
@@ -12614,7 +12614,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,5,5,4,4,5,4,4,2,3,3,1,2,4,20,4,3,5,5,2,Female,Right,Overcontroller
 4,2,3,3,4,2,4,1,2,3,2,3,2,5,32,5,1,4,5,2,Male,Right,Moderate
 3,3,3,4,3,3,5,3,5,2,5,3,5,1,20,2,3,5,1,5,Female,Right,Moderate
-2,3,4,4,4,4,4,3,2,4,2,2,1,5,32,2,2,5,4,5,Female,Right,Moderate
+2,3,4,4,4,4,4,3,2,4,2,2,1,5,23,2,2,5,4,5,Female,Right,Moderate
 3,4,4,4,5,4,2,3,3,3,4,2,3,1,26,5,4,3,1,5,Female,Right,Undercontroller
 2,3,2,4,4,4,5,4,2,5,3,1,2,3,32,3,3,5,5,2,Female,Right,Moderate
 3,3,3,4,3,3,3,3,4,3,3,3,2,3,49,3,3,4,3,2,Female,Right,Undercontroller
@@ -12753,7 +12753,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,5,4,5,4,5,4,3,4,2,3,1,3,3,17,3,2,4,4,2,Female,Right,Moderate
 3,2,2,3,3,3,5,2,4,3,4,3,4,3,19,2,2,5,2,5,Female,Right,Moderate
 1,1,1,2,1,1,2,5,5,5,5,5,5,1,19,2,4,5,1,5,Female,Right,Resilient
-3,3,3,4,3,4,4,4,4,4,3,2,4,3,30,2,2,4,4,2,Female,Right,Moderate
+3,3,3,4,3,4,4,4,4,4,3,2,4,3,21,2,2,4,4,2,Female,Right,Moderate
 1,3,5,2,5,5,1,4,3,3,1,1,1,3,17,1,1,2,5,1,Female,Right,Moderate
 3,3,3,5,4,2,5,4,4,3,5,4,4,2,18,4,4,4,3,4,Female,Left,Moderate
 3,3,3,3,2,2,4,2,4,2,4,2,5,3,19,2,4,5,4,3,Female,Right,Moderate
@@ -12796,7 +12796,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,3,3,3,3,2,3,2,2,2,4,2,1,2,23,3,1,4,5,1,Female,Right,Moderate
 5,5,5,5,5,4,5,5,1,4,2,4,5,3,16,5,2,3,4,3,Male,Both,Undercontroller
 5,3,4,5,4,3,5,4,4,3,3,3,3,5,38,3,1,5,5,1,Female,Right,Overcontroller
-3,4,4,4,4,3,5,4,3,3,3,3,3,3,33,3,3,5,5,4,Female,Right,Undercontroller
+3,4,4,4,4,3,5,4,3,3,3,3,3,3,24,3,3,5,5,4,Female,Right,Undercontroller
 1,1,2,1,1,1,4,2,5,5,5,5,4,2,23,1,3,5,2,4,Male,Right,Resilient
 2,4,5,4,5,4,3,4,4,2,4,2,3,2,28,2,3,3,2,5,Female,Right,Moderate
 4,1,1,3,2,1,4,2,5,3,5,4,5,5,67,1,4,3,1,5,Female,Right,Resilient
@@ -12870,7 +12870,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,4,3,3,5,4,3,4,3,2,4,3,3,4,18,3,2,3,4,2,Male,Right,Undercontroller
 4,4,4,5,4,5,5,2,1,4,1,1,1,5,24,5,1,1,5,1,Male,Right,Overcontroller
 3,3,2,3,3,4,2,3,3,3,5,1,5,3,26,4,4,4,2,4,Male,Left,Moderate
-5,4,4,2,5,3,5,4,4,1,5,3,2,3,34,2,3,5,5,3,Female,Right,Moderate
+5,4,4,2,5,3,5,4,4,1,5,3,2,3,25,2,3,5,5,3,Female,Right,Moderate
 4,2,4,3,3,2,4,4,4,3,4,3,4,4,20,4,3,4,4,4,Female,Right,Moderate
 2,1,1,2,1,1,2,2,3,4,4,2,5,4,37,2,3,4,2,2,Female,Right,Resilient
 2,1,2,4,2,3,4,5,1,4,2,2,5,4,18,2,2,5,4,4,Male,Right,Moderate
@@ -13032,7 +13032,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,1,1,2,1,1,1,1,3,4,2,4,2,4,27,2,2,1,4,4,Male,Right,Resilient
 4,4,4,5,5,4,5,4,5,3,4,2,4,1,57,1,3,3,2,5,Female,Right,Moderate
 4,1,1,2,2,1,2,2,5,3,3,3,4,3,23,2,5,5,3,5,Other,Right,Resilient
-4,5,5,4,4,2,5,3,5,4,4,2,5,2,34,2,1,4,2,2,Male,Right,Moderate
+4,5,5,4,4,2,5,3,5,4,4,2,5,2,25,2,1,4,2,2,Male,Right,Moderate
 1,1,1,1,2,2,3,2,5,4,5,4,3,4,37,1,2,4,2,4,Male,Right,Resilient
 2,3,3,2,2,2,2,2,3,4,4,4,2,2,21,2,2,3,2,4,Male,Right,Resilient
 5,5,5,2,5,5,4,5,2,2,2,1,2,4,24,4,3,4,4,1,Male,Right,Overcontroller
@@ -13130,7 +13130,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,2,2,5,4,3,5,2,2,3,3,2,1,5,35,3,1,5,5,1,Male,Right,Moderate
 4,3,4,4,5,4,5,5,5,2,5,4,5,4,22,5,4,5,2,5,Male,Right,Moderate
 5,5,4,3,5,5,5,5,4,1,3,4,2,5,20,2,3,5,5,1,Male,Right,Overcontroller
-5,4,5,5,5,5,5,5,3,1,1,1,5,5,36,5,4,5,5,5,Female,Right,Moderate
+5,4,5,5,5,5,5,5,3,1,1,1,5,5,27,5,4,5,5,5,Female,Right,Moderate
 4,3,4,4,4,3,4,3,3,4,4,2,2,3,19,3,4,4,4,4,Male,Right,Moderate
 5,5,5,5,5,2,3,3,5,5,4,3,2,1,21,2,5,5,3,5,Male,Right,Moderate
 3,1,4,2,4,3,4,3,4,2,2,2,2,3,44,1,3,2,2,2,Male,Left,Undercontroller
@@ -13310,7 +13310,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,4,4,4,1,3,4,4,5,2,5,4,5,1,24,3,3,5,2,4,Female,Right,Moderate
 2,5,5,5,4,5,5,3,2,1,3,5,3,5,20,5,1,5,5,3,Male,Right,Overcontroller
 3,3,3,3,4,1,5,4,3,2,4,4,3,3,18,3,3,3,3,5,Male,Left,Moderate
-4,5,4,3,4,1,5,2,2,4,2,1,2,1,34,4,1,3,3,1,Female,Right,Moderate
+4,5,4,3,4,1,5,2,2,4,2,1,2,1,25,4,1,3,3,1,Female,Right,Moderate
 5,2,3,5,5,3,5,3,1,2,4,3,2,3,29,5,1,5,4,3,Male,Right,Moderate
 4,2,4,5,4,4,5,2,5,4,4,3,5,2,17,4,3,4,2,4,Female,Left,Moderate
 5,5,5,1,5,1,5,5,1,1,1,5,1,5,21,4,1,3,5,1,Female,Right,Overcontroller
@@ -13348,7 +13348,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,5,5,5,5,5,4,4,2,1,1,5,1,4,21,4,1,3,5,5,Female,Left,Moderate
 2,1,3,1,4,3,4,2,3,4,4,4,3,3,29,3,4,3,3,4,Male,Right,Resilient
 4,4,4,5,4,2,4,4,5,2,5,2,4,5,27,3,3,4,3,3,Male,Right,Moderate
-5,5,5,5,5,5,5,5,3,2,2,2,1,3,35,4,2,4,5,4,Female,Right,Undercontroller
+5,5,5,5,5,5,5,5,3,2,2,2,1,3,26,4,2,4,5,4,Female,Right,Undercontroller
 1,3,2,3,1,5,4,2,2,4,2,2,1,5,27,5,1,5,5,1,Female,Right,Moderate
 4,2,2,4,4,2,5,4,2,5,5,2,3,5,26,4,2,4,2,5,Male,Left,Undercontroller
 3,2,3,4,2,2,5,4,3,2,4,3,4,2,46,2,3,5,2,3,Female,Right,Moderate
@@ -13506,7 +13506,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,1,1,2,2,1,2,2,2,5,4,1,3,2,36,1,3,5,4,1,Female,Right,Resilient
 3,3,4,5,3,3,4,4,3,3,3,2,2,4,15,2,1,5,4,5,Female,Right,Moderate
 5,3,4,4,4,3,3,3,4,3,5,2,5,2,31,2,3,3,3,3,Female,Right,Moderate
-5,1,1,5,5,5,5,5,1,1,5,1,5,5,44,1,1,5,1,1,Male,Right,Moderate
+5,1,1,5,5,5,5,5,1,1,5,1,5,5,35,1,1,5,1,1,Male,Right,Moderate
 3,2,3,4,2,2,3,2,4,4,5,3,5,2,14,2,4,4,2,5,Male,Right,Resilient
 3,1,1,5,1,3,5,4,3,4,1,3,1,5,30,1,1,3,5,1,Male,Right,Undercontroller
 3,3,3,2,2,3,4,2,2,4,5,3,5,2,24,3,3,4,3,3,Male,Right,Moderate
@@ -14527,7 +14527,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,4,3,3,4,4,4,1,4,5,1,3,2,2,22,1,3,4,5,4,Female,Right,Moderate
 2,2,3,3,2,1,3,3,4,4,3,2,2,3,18,3,3,3,5,3,Female,Right,Resilient
 4,4,4,4,4,4,4,3,5,3,5,1,5,2,32,3,4,5,2,4,Male,Right,Moderate
-5,1,2,5,5,1,5,2,5,4,5,1,3,4,28,3,4,2,1,5,Male,Both,Undercontroller
+5,1,2,5,5,1,5,2,5,4,5,1,3,4,19,3,4,2,1,5,Male,Both,Undercontroller
 2,2,3,1,3,3,3,4,2,4,4,3,2,3,19,2,3,5,4,3,Female,Right,Resilient
 2,4,4,2,3,2,3,3,4,3,3,4,4,4,17,2,3,4,5,2,Female,Left,Moderate
 5,4,5,2,4,4,2,4,3,3,2,3,2,4,27,2,2,5,5,2,Male,Right,Overcontroller
@@ -15426,7 +15426,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,1,2,2,2,2,2,2,4,4,5,2,3,3,27,1,3,3,4,3,Male,Right,Resilient
 2,2,3,3,3,4,4,3,3,3,3,4,2,4,25,2,2,4,4,3,Female,Right,Moderate
 2,2,2,3,4,3,4,3,3,2,4,2,3,3,18,4,2,3,4,2,Female,Right,Moderate
-2,2,2,1,5,3,4,2,3,3,4,3,2,3,37,2,3,3,5,5,Male,Right,Moderate
+2,2,2,1,5,3,4,2,3,3,4,3,2,3,28,2,3,3,5,5,Male,Right,Moderate
 2,2,3,3,2,3,2,2,5,4,4,3,3,3,36,2,4,4,4,4,Female,Right,Resilient
 5,5,5,4,5,3,5,1,4,1,5,1,5,4,33,5,2,5,1,5,Female,Right,Moderate
 4,2,2,2,4,3,5,3,3,4,5,2,5,2,31,3,4,3,3,5,Male,Right,Moderate
@@ -15672,7 +15672,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,1,2,2,2,2,5,2,4,5,4,3,5,3,19,2,4,4,2,5,Male,Right,Resilient
 4,4,3,2,3,5,5,4,3,3,2,1,1,3,16,2,2,4,5,3,Female,Right,Overcontroller
 5,4,4,4,3,2,5,3,4,2,5,2,5,2,16,2,3,5,2,4,Female,Right,Moderate
-2,3,4,3,3,3,4,4,3,4,4,3,2,3,37,4,5,3,3,3,Male,Right,Undercontroller
+2,3,4,3,3,3,4,4,3,4,4,3,2,3,28,4,5,3,3,3,Male,Right,Undercontroller
 4,3,3,4,4,5,4,4,2,2,3,1,4,4,21,3,3,5,5,1,Female,Left,Overcontroller
 2,3,4,2,3,3,4,2,3,4,2,2,2,4,27,4,1,3,5,2,Female,Right,Undercontroller
 4,5,5,4,2,2,5,2,4,2,2,3,5,2,17,2,4,5,5,5,Female,Right,Moderate
@@ -15746,7 +15746,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,5,5,5,5,5,5,5,1,2,1,1,1,5,27,5,1,4,5,1,Female,Left,Overcontroller
 2,2,3,5,2,2,5,4,3,2,3,3,4,2,19,3,3,2,5,3,Female,Right,Undercontroller
 3,2,3,4,4,2,5,2,2,3,2,4,2,4,25,2,1,4,4,2,Female,Right,Moderate
-2,2,1,2,1,3,3,2,4,4,4,2,3,1,50,2,1,3,1,2,Male,Right,Resilient
+2,2,1,2,1,3,3,2,4,4,4,2,3,1,41,2,1,3,1,2,Male,Right,Resilient
 2,4,4,4,4,2,4,2,4,3,4,3,5,3,23,3,3,5,3,4,Female,Right,Moderate
 2,1,2,2,2,2,4,4,5,4,5,3,5,1,23,1,3,5,5,2,Male,Right,Resilient
 5,5,5,5,4,5,5,4,5,3,5,1,5,4,23,4,4,5,3,1,Female,Right,Moderate
@@ -15966,7 +15966,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,5,5,5,5,4,4,4,3,2,2,4,1,4,17,4,1,3,5,1,Female,Right,Overcontroller
 1,2,2,4,1,2,3,3,3,3,3,4,2,3,20,1,3,5,3,3,Female,Right,Resilient
 5,4,4,5,5,4,5,5,3,1,5,3,4,2,19,2,3,5,2,3,Female,Right,Moderate
-3,1,2,1,3,1,2,3,5,4,3,1,5,2,30,1,4,3,3,4,Female,Right,Resilient
+3,1,2,1,3,1,2,3,5,4,3,1,5,2,21,1,4,3,3,4,Female,Right,Resilient
 3,2,2,5,3,1,5,2,5,3,5,2,5,5,19,2,3,5,1,4,Female,Right,Moderate
 4,3,3,5,5,2,5,3,5,4,4,3,4,1,20,2,3,5,4,4,Female,Right,Moderate
 3,2,4,2,1,3,4,3,4,4,3,3,2,4,21,1,1,5,5,1,Female,Right,Moderate
@@ -16145,7 +16145,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,2,3,3,3,3,3,4,4,3,4,3,4,23,4,4,3,3,3,Female,Right,Resilient
 2,2,3,5,3,5,5,1,1,1,1,1,1,5,20,2,1,4,5,1,Female,Right,Overcontroller
 2,2,4,2,2,4,4,2,4,4,2,4,4,4,32,2,2,4,4,4,Male,Right,Resilient
-4,4,4,1,3,4,4,4,5,1,3,1,3,3,44,3,1,5,4,4,Female,Right,Moderate
+4,4,4,1,3,4,4,4,5,1,3,1,3,3,35,3,1,5,4,4,Female,Right,Moderate
 2,2,3,4,3,3,5,3,2,5,3,3,3,4,14,3,2,5,4,3,Female,Right,Moderate
 3,4,5,3,3,3,4,3,3,5,5,4,3,3,14,3,3,4,5,4,Female,Right,Moderate
 5,5,5,4,1,5,5,5,5,1,2,5,1,5,45,4,1,5,5,5,Female,Right,Overcontroller
@@ -16555,7 +16555,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 1,2,2,5,5,2,3,3,3,3,1,2,1,3,18,5,1,3,1,4,Female,Right,Undercontroller
 3,2,2,4,2,2,3,4,5,3,5,4,5,1,24,3,5,4,1,5,Female,Left,Moderate
 5,5,5,5,4,5,5,5,4,2,5,1,4,3,16,5,4,5,5,4,Female,Right,Moderate
-2,2,2,3,4,1,4,4,3,3,2,5,3,3,31,2,1,4,5,2,Male,Right,Resilient
+2,2,2,3,4,1,4,4,3,3,2,5,3,3,22,2,1,4,5,2,Male,Right,Resilient
 3,3,3,5,2,4,4,4,3,4,4,2,1,4,17,3,2,3,5,3,Female,Right,Moderate
 5,5,5,5,5,3,3,5,4,5,2,4,5,4,19,5,4,4,4,3,Female,Right,Undercontroller
 4,3,3,4,4,2,4,2,5,4,4,3,3,4,29,5,2,5,5,3,Female,Right,Moderate
@@ -16772,7 +16772,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,5,5,5,5,5,5,5,3,2,5,5,5,2,16,5,4,5,2,3,Female,Right,Moderate
 4,5,5,5,4,4,5,5,2,2,4,5,1,4,16,3,1,4,5,2,Female,Left,Overcontroller
 5,5,4,5,5,5,5,4,2,4,2,3,3,4,14,4,4,3,5,2,Male,Right,Overcontroller
-3,2,1,4,4,3,5,2,2,3,1,4,1,4,30,3,3,5,1,1,Female,Right,Undercontroller
+3,2,1,4,4,3,5,2,2,3,1,4,1,4,21,3,3,5,1,1,Female,Right,Undercontroller
 3,1,3,5,3,1,3,1,3,4,3,3,5,2,16,2,1,3,4,1,Female,Right,Resilient
 2,2,3,2,2,1,4,3,4,4,4,2,4,2,18,5,3,5,4,2,Female,Right,Resilient
 1,2,2,2,2,2,3,3,5,4,4,4,4,2,51,1,3,5,4,5,Male,Right,Resilient
@@ -16925,8 +16925,8 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,3,4,2,2,4,4,4,4,4,2,4,3,20,2,2,4,3,1,Female,Right,Moderate
 3,4,4,4,3,4,4,4,5,4,4,3,4,4,21,2,4,3,4,4,Male,Right,Moderate
 1,2,3,4,2,1,5,4,3,2,4,1,2,2,14,2,3,4,4,5,Female,Left,Moderate
-1,1,1,2,1,1,3,3,5,4,5,1,5,1,32,1,5,4,1,2,Female,Right,Resilient
-5,5,4,5,5,4,5,5,1,1,1,1,1,5,41,5,2,5,4,3,Female,Both,Overcontroller
+1,1,1,2,1,1,3,3,5,4,5,1,5,1,23,1,5,4,1,2,Female,Right,Resilient
+5,5,4,5,5,4,5,5,1,1,1,1,1,5,32,5,2,5,4,3,Female,Both,Overcontroller
 2,3,3,4,4,3,5,1,4,3,3,2,4,5,21,2,3,4,5,4,Female,Right,Moderate
 4,2,4,4,3,2,5,1,3,4,5,2,3,4,18,5,1,5,5,3,Male,Right,Moderate
 2,2,2,3,2,3,2,2,4,4,4,3,3,3,46,2,3,4,4,3,Female,Right,Resilient
@@ -16943,7 +16943,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 5,4,4,5,1,4,5,4,1,2,1,1,1,5,16,2,1,2,5,1,Female,Right,Overcontroller
 2,3,4,3,2,2,4,4,2,2,2,2,2,4,17,4,2,3,4,2,Female,Left,Undercontroller
 1,2,3,4,4,1,3,2,4,4,3,4,5,3,17,2,3,4,4,3,Female,Right,Resilient
-1,1,2,1,1,3,1,1,5,5,5,3,5,4,36,3,2,1,1,1,Male,Right,Resilient
+1,1,2,1,1,3,1,1,5,5,5,3,5,4,27,3,2,1,1,1,Male,Right,Resilient
 1,1,1,1,1,1,1,1,5,5,5,5,5,1,15,1,5,5,1,5,Male,Right,Resilient
 3,1,4,4,4,1,5,1,4,4,5,5,4,1,17,3,3,5,5,1,Female,Right,Resilient
 1,5,5,1,1,1,1,1,5,5,5,1,5,5,29,1,5,5,1,5,Female,Right,Resilient
@@ -17384,7 +17384,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,1,1,3,5,1,4,5,3,3,3,1,3,1,17,2,3,3,5,5,Male,Right,Undercontroller
 5,5,5,5,5,4,5,2,5,5,4,4,4,4,16,5,2,4,3,4,Female,Right,Undercontroller
 4,3,4,2,4,3,2,3,3,4,2,3,2,3,16,4,3,3,4,2,Female,Right,Undercontroller
-2,4,4,4,1,2,3,4,4,1,4,2,4,3,34,2,3,5,3,4,Female,Right,Moderate
+2,4,4,4,1,2,3,4,4,1,4,2,4,3,25,2,3,5,3,4,Female,Right,Moderate
 5,4,4,5,5,5,5,5,2,1,4,1,1,3,17,4,2,4,5,4,Female,Right,Overcontroller
 4,4,4,2,4,4,4,2,5,3,5,2,5,1,17,4,4,4,1,5,Male,Right,Moderate
 1,1,1,1,1,1,1,1,5,4,5,5,2,2,16,1,1,3,2,4,Male,Right,Resilient
@@ -17702,7 +17702,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,4,3,3,3,3,5,3,4,4,4,2,2,2,19,3,4,5,3,4,Female,Right,Moderate
 1,1,1,1,1,4,4,1,3,1,3,2,1,2,28,4,3,5,3,1,Female,Right,Resilient
 5,3,4,5,5,3,4,5,1,3,1,2,1,5,20,2,1,3,5,1,Female,Right,Overcontroller
-2,2,3,3,4,2,5,3,3,5,2,3,3,5,42,2,3,5,5,3,Other,Right,Moderate
+2,2,3,3,4,2,5,3,3,5,2,3,3,5,33,2,3,5,5,3,Other,Right,Moderate
 3,5,5,2,3,3,3,2,3,3,3,2,1,5,15,4,1,5,5,2,Female,Right,Undercontroller
 1,1,1,2,2,1,3,3,5,5,3,4,3,4,19,4,2,4,5,4,Male,Right,Resilient
 3,1,2,4,1,2,3,2,4,4,4,2,4,2,18,2,3,5,4,2,Female,Right,Resilient
@@ -18067,7 +18067,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,4,5,2,4,4,4,4,3,4,4,2,4,2,22,5,4,4,4,4,Male,Right,Undercontroller
 2,2,2,2,2,2,3,2,5,5,5,3,3,2,20,2,3,5,3,4,Male,Right,Resilient
 1,1,1,1,1,1,4,1,5,3,5,5,3,2,69,1,1,5,2,3,Female,Right,Resilient
-3,4,3,4,4,3,3,3,3,4,3,2,2,3,34,3,3,4,2,3,Male,Right,Moderate
+3,4,3,4,4,3,3,3,3,4,3,2,2,3,25,3,3,4,2,3,Male,Right,Moderate
 1,1,1,2,1,2,3,2,5,5,3,4,4,2,21,2,5,5,2,4,Female,Right,Resilient
 3,3,4,3,3,3,5,2,4,4,4,3,4,3,23,2,4,4,2,1,Female,Right,Moderate
 2,1,1,2,2,2,5,2,5,2,2,4,2,2,29,1,4,5,3,3,Female,Right,Resilient
@@ -18398,7 +18398,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 4,3,3,5,4,2,5,3,3,3,4,3,2,5,17,3,1,5,5,1,Female,Right,Moderate
 2,2,2,4,3,4,4,1,2,4,2,2,2,4,19,3,2,4,5,2,Female,Right,Moderate
 4,2,4,4,4,4,5,4,4,2,4,2,2,2,19,2,2,5,2,2,Female,Right,Moderate
-3,4,5,5,4,1,5,2,4,2,5,2,5,3,30,1,4,3,2,1,Female,Right,Moderate
+3,4,5,5,4,1,5,2,4,2,5,2,5,3,21,1,4,3,2,1,Female,Right,Moderate
 4,3,5,3,5,1,2,2,5,4,3,3,3,3,29,4,5,2,4,5,Female,Right,Moderate
 2,1,2,1,2,2,2,2,4,4,4,4,4,4,18,1,2,4,4,2,Male,Right,Resilient
 2,3,3,2,2,2,4,3,2,4,1,3,2,4,27,2,1,4,5,1,Female,Right,Resilient
@@ -18536,7 +18536,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,5,5,5,2,5,5,5,4,2,5,1,1,4,56,2,2,5,1,5,Female,Right,Moderate
 2,2,2,2,2,2,3,2,4,3,2,2,2,3,20,2,1,2,3,2,Male,Right,Resilient
 1,2,1,3,2,1,5,2,5,2,4,4,4,1,28,2,3,5,3,3,Female,Right,Resilient
-5,1,3,5,4,3,4,5,3,5,3,3,1,5,28,5,1,2,5,5,Male,Right,Undercontroller
+5,1,3,5,4,3,4,5,3,5,3,3,1,5,19,5,1,2,5,5,Male,Right,Undercontroller
 2,1,2,4,2,2,5,2,4,2,1,3,1,3,20,2,1,5,4,1,Female,Right,Moderate
 5,5,5,4,4,5,4,5,3,1,4,1,2,5,15,5,2,5,4,3,Male,Right,Overcontroller
 1,1,4,1,1,5,1,1,5,5,5,5,5,1,30,1,5,5,1,4,Male,Right,Resilient
@@ -18604,7 +18604,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 3,1,2,3,3,4,4,4,4,3,4,3,2,2,34,4,3,5,4,4,Male,Right,Moderate
 2,2,1,1,1,1,5,4,3,5,4,4,2,4,22,4,3,2,4,2,Male,Right,Resilient
 1,2,2,1,1,4,2,1,3,5,4,5,4,2,21,4,3,4,5,4,Male,Right,Resilient
-1,1,1,4,2,1,5,2,5,4,4,2,4,3,62,1,3,5,5,1,Female,Right,Resilient
+1,1,1,4,2,1,5,2,5,4,4,2,4,3,53,1,3,5,5,1,Female,Right,Resilient
 2,3,3,2,2,2,2,2,4,4,3,4,2,2,26,3,4,3,2,4,Male,Right,Resilient
 4,5,4,4,4,2,5,2,4,2,5,3,5,3,23,2,3,5,2,4,Female,Right,Moderate
 4,4,4,4,4,2,3,4,4,2,5,3,5,1,17,3,5,4,2,5,Female,Right,Undercontroller
@@ -18673,7 +18673,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,1,2,2,2,1,4,2,5,4,3,2,2,3,42,2,4,5,3,2,Female,Right,Resilient
 3,3,5,4,5,4,4,4,5,2,5,4,3,2,18,3,4,4,3,2,Male,Right,Moderate
 4,4,2,3,2,1,4,4,4,3,4,1,3,2,22,3,1,4,1,5,Female,Right,Moderate
-2,3,4,3,2,2,3,3,3,3,2,2,2,2,33,2,3,3,5,2,Female,Right,Moderate
+2,3,4,3,2,2,3,3,3,3,2,2,2,2,24,2,3,3,5,2,Female,Right,Moderate
 1,1,3,3,1,1,3,2,5,3,3,5,3,3,22,1,3,5,4,5,Male,Right,Resilient
 1,1,1,1,2,1,3,1,4,4,4,4,2,1,50,1,2,4,3,2,Male,Right,Resilient
 2,2,2,4,2,2,2,3,5,3,5,4,5,3,21,3,4,4,2,4,Female,Right,Resilient
@@ -19481,7 +19481,7 @@ N6,N8,N7,N1,N9,N10,N3,N5,E3,N2,E5,N4,E7,E4,age,C4,E1,A4,E10,E9,gender,hand,targe
 2,2,2,2,1,1,2,2,5,4,4,4,4,1,33,2,4,4,3,4,Female,Right,Resilient
 5,5,5,5,5,5,5,1,2,3,1,1,2,4,22,5,1,5,5,2,Male,Right,Overcontroller
 2,2,4,3,2,2,3,4,3,4,4,2,2,3,20,3,2,5,5,2,Female,Right,Moderate
-2,2,4,2,5,2,1,4,5,4,3,2,5,1,28,3,5,1,2,5,Male,Both,Undercontroller
+2,2,4,2,5,2,1,4,5,4,3,2,5,1,19,3,5,1,2,5,Male,Both,Undercontroller
 2,1,2,2,2,2,2,1,5,4,5,5,5,1,19,1,4,4,2,2,Female,Right,Resilient
 2,2,2,2,4,1,4,1,5,4,4,5,5,2,21,2,2,5,3,1,Female,Right,Resilient
 2,1,1,3,2,2,4,2,4,4,3,2,2,3,21,1,4,5,4,5,Male,Right,Resilient
