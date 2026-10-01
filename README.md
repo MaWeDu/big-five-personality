@@ -23,7 +23,7 @@ The letter in a column name says which trait the statement belongs to:
 | Trait | Letter | High scores | Low scores | Items here |
 |---|---|---|---|---|
 | Neuroticism | **N** | More emotional — easily stressed, upset or irritated | Calm and emotionally stable | 10 |
-| Extroversion | **E** | Social, outgoing, comfortable with attention | Prefers to work alone and stay in the background | 7 |
+| Extraversion | **E** | Social, outgoing, comfortable with attention | Prefers to work alone and stay in the background | 7 |
 | Conscientiousness | **C** | Follows the rules, prefers order | Tends to be disorganized | 1 |
 | Agreeableness | **A** | Accommodating, sympathetic to others | Direct | 1 |
 | Openness to Experience | **O** | "Dreams with their eyes open" | "Feet on the ground" | 0 — not in this dataset |
