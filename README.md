@@ -39,6 +39,3 @@ The letter in a column name is the OCEAN trait the statement belongs to:
 
 **Our task:** a supervised, multi-class classification problem — predict `target` from the
 19 answers plus the three demographic columns.
-
-
-CHANGE
