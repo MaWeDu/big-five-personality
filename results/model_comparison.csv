@@ -1,0 +1,9 @@
+model,tuning,f1_macro,accuracy
+HistGradientBoosting,grid search,0.8066,
+HistGradientBoosting,hyperopt,0.805,
+HistGradientBoosting,none,0.8014,0.8619
+LogisticRegression,hyperopt,0.7829,
+LogisticRegression,grid search,0.7827,
+LogisticRegression,none,0.7672,0.853
+RandomForest,none,0.7426,0.8375
+KNN,none,0.7284,0.8112
