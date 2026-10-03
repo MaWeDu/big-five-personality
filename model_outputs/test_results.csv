@@ -1,0 +1,2 @@
+Modell,Verfahren,CV F1-Macro,Test F1-Macro,Test Accuracy
+HistGradientBoosting,Hyperopt,0.8013653457580343,0.8093788458072446,0.8700867789688617
