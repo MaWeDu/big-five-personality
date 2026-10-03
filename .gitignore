@@ -4,5 +4,6 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 data/
+JT_EDA_Personality_Type_prediction.ipynb
 MP EDA Personality.ipynb
 MW_EDA.ipynb
