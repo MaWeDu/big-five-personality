@@ -2,10 +2,11 @@
 
 **Champion model: HistGradientBoosting, tuned with grid search**
 
-Selected by **macro F1** under 5-fold stratified cross-validation on the training set — the metric that treats every personality type equally, which matters because the classes are imbalanced (Moderate 43%, Undercontroller 12%).
+Selected by **macro F1** under 5-fold stratified cross-validation on the training set. Macro F1 treats every personality type equally, which matters here because the classes are imbalanced (Moderate 43%, Undercontroller 12%).
 
 - Cross-validation macro F1: **0.804**
 - Held-out test set macro F1: **0.799**
+- Held-out test set accuracy: **83.5%**
 - Baseline (always predicts Moderate): 0.150 macro F1, 0.429 accuracy
 
 Champion settings: `class_weight: balanced, learning_rate: 0.1, max_leaf_nodes: 31`
@@ -25,4 +26,4 @@ Champion settings: `class_weight: balanced, learning_rate: 0.1, max_leaf_nodes: 
 | Random Forest | none | 0.740 | — |
 | K-Nearest Neighbors | none | 0.730 | — |
 
-So we refit this pipeline (preprocessing + classifier) on the full dataset and saved it as the final model for the Streamlit app.
+The champion pipeline (preprocessing + classifier) was refit on the full dataset and saved as `models/personality_pipeline.joblib` for the Streamlit app.

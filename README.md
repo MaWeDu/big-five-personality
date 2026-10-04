@@ -1,64 +1,200 @@
-# big-five-personality
-This notebook is part of a complete supervised machine-learning project: predicting a person's personality type from a short questionnaire. It covers data exploration, preprocessing, model comparison, hyperparameter tuning, and a Streamlit app for instant predictions.
+# Personality Profile Predictor 🌊
 
-## About the data
+Predicts a person's Big Five personality profile from a short questionnaire, and serves the
+prediction through an ocean-themed Streamlit web app.
 
-The data comes from the **IPIP Big Five (OCEAN)** personality test, published on Kaggle.
-The original version has 50 statements answered by about 19,000 people; for this project a
-streamlined version was prepared that keeps the **19 most informative items** plus a few
-demographics.
+---
 
-Each row is one person:
+## 1. Overview
 
-| Columns | What they are |
+**What this project does.** A user answers **19 short statements** (1 = Disagree to
+5 = Agree) and gives their age, gender and writing hand. A trained scikit-learn pipeline
+predicts one of four personality profiles and the app shows the result instantly, together
+with the probability the model assigns to each profile.
+
+**The problem.** This is a **supervised multi-class classification** task: given 22 features
+(19 questionnaire answers + 3 demographics), predict one of four classes. The classes are
+imbalanced, and that decides how the models have to be measured.
+
+**The dataset.** The data comes from the **IPIP Big Five (OCEAN)** personality test published
+on Kaggle. The original version has 50 statements answered by about 19,000 people; this
+project uses a prepared version with the 19 most informative items plus three demographics and
+the target.
+
+| Column group | What it holds |
 |---|---|
-| 19 item columns | The raw answer to one statement: **1 = Disagree, 2 = Slightly Disagree, 3 = Neutral, 4 = Slightly Agree, 5 = Agree** |
-| `age`, `gender`, `hand` | Age in years; Male/Female/Other; Right/Left/Both |
-| `target` | The personality type we want to predict |
+| 19 item columns (`N1`–`N10`, `E1`, `E3`, `E4`, `E5`, `E7`, `E9`, `E10`, `C4`, `A4`) | The raw answer to one statement, 1–5 |
+| `age`, `gender`, `hand` | Age in years; Female/Male/Other; Right/Left/Both |
+| `target` | The personality profile to predict |
 
-### The OCEAN traits
+One row is one person. The letter in a column name is the trait the statement belongs to:
+**N** = Neuroticism (10 items), **E** = Extraversion (7), **C** = Conscientiousness (1),
+**A** = Agreeableness (1).
 
-The letter in a column name says which trait the statement belongs to:
+**The four target classes:**
 
-| Trait | Letter | High scores | Low scores | Items here |
-|---|---|---|---|---|
-| Neuroticism | **N** | More emotional — easily stressed, upset or irritated | Calm and emotionally stable | 10 |
-| Extraversion | **E** | Social, outgoing, comfortable with attention | Prefers to work alone and stay in the background | 7 |
-| Conscientiousness | **C** | Follows the rules, prefers order | Tends to be disorganized | 1 |
-| Agreeableness | **A** | Accommodating, sympathetic to others | Direct | 1 |
-| Openness to Experience | **O** | "Dreams with their eyes open" | "Feet on the ground" | 0 — not in this dataset |
-
-### The 19 personality items
-
-Values are the **raw** answer to the statement. Items marked ↺ are worded in the opposite
-direction, so a high answer means *less* of that trait.
-
-| Item | Statement | | Item | Statement |
-|---|---|---|---|---|
-| `N1` | I get stressed out easily. | | `E1` | I am the life of the party. |
-| `N2` ↺ | I am relaxed most of the time. | | `E3` | I feel comfortable around people. |
-| `N3` | I worry about things. | | `E4` ↺ | I keep in the background. |
-| `N4` ↺ | I seldom feel blue. | | `E5` | I start conversations. |
-| `N5` | I am easily disturbed. | | `E7` | I talk to a lot of different people at parties. |
-| `N6` | I get upset easily. | | `E9` | I don't mind being the center of attention. |
-| `N7` | I change my mood a lot. | | `E10` ↺ | I am quiet around strangers. |
-| `N8` | I have frequent mood swings. | | `C4` ↺ | I make a mess of things. |
-| `N9` | I get irritated easily. | | `A4` | I sympathize with others' feelings. |
-| `N10` | I often feel blue. | | | |
-
-### The four personality types
-
-The `target` was derived from the OCEAN trait scores (z-scores) with fixed rules:
-
-| Personality type | Rule | What that means |
+| Profile | In a nutshell | Share of the data |
 |---|---|---|
-| **Resilient** | N < −0.5 | Emotionally stable, calm under pressure |
-| **Overcontroller** | E < −0.5 **and** N > 0.5 | Anxious and introverted |
-| **Undercontroller** | C < −0.2 **and** A < −0.2 | Impulsive, disorganized, less concerned with rules |
-| **Moderate** | default, when no other rule matches | Balanced, no extreme traits |
+| **Moderate** | Balanced, no extreme traits | ~43% |
+| **Resilient** | Emotionally stable, calm under pressure | ~31% |
+| **Overcontroller** | Anxious and introverted | ~14% |
+| **Undercontroller** | Impulsive, less concerned with rules | ~12% |
 
-The codebook also defines a fifth type, **Reserved** (E < −0.5 and N < −0.5), but it does not
-appear in a single row of our data.
+**The approach.** EDA → preprocessing pipeline → modeling and tuning → save the best model →
+Streamlit app.
 
-**Our task:** a supervised, multi-class classification problem — predict `target` from the
-19 answers plus the three demographic columns.
+1. **EDA** explores the data and writes a cleaned dataset (19,588 of the 19,719 rows). It
+   removes answers outside the 1–5 scale and rows with missing `gender`/`hand`, and fixes or
+   removes impossible ages (the raw data contains values up to 1,000,000,000 and birth years
+   typed in instead of ages).
+2. **One preprocessing pipeline**, a `ColumnTransformer` that imputes and scales the numeric
+   columns and imputes and one-hot encodes the categorical ones, is shared by every model, so
+   the comparison is fair.
+3. **Four models** (Logistic Regression, K-Nearest Neighbors, Random Forest,
+   HistGradientBoosting), each in its own pipeline, are compared with 5-fold stratified
+   cross-validation and then **each tuned twice**: with `GridSearchCV` and with Hyperopt.
+4. The **champion is saved with joblib** as the whole pipeline, preprocessing included.
+5. The **Streamlit app** loads that file and serves predictions. It never trains anything.
+
+**The result.**
+
+> **Champion model: HistGradientBoosting (`HistGradientBoostingClassifier`), tuned with grid
+> search.** Selected by **macro F1** under 5-fold stratified cross-validation:
+> **0.804 CV**, confirmed with **0.799** on a held-out 20% test set that no model saw during
+> training or tuning (test accuracy **83.5%**). The baseline that always predicts "Moderate"
+> scores 0.150 macro F1.
+>
+> Winning settings: `class_weight='balanced'`, `learning_rate=0.1`, `max_leaf_nodes=31`.
+
+Macro F1 rather than accuracy, because the classes are imbalanced: always predicting
+"Moderate" already gives about 43% accuracy while learning nothing.
+
+**How to use the app.** Answer the 19 statements by clicking 1–5, set your age and gender,
+slide the writing-hand control, and press the button. You get your predicted profile, the sea
+creature that matches it, an explanation, and the probability for all four profiles.
+
+---
+
+## 2. Setup
+
+Everything below assumes you have just cloned this repository and have nothing else.
+Python 3.11 or newer.
+
+### Step 1: Get the data
+
+The dataset is **not** in this repository. Download it from the project Drive folder:
+
+<https://drive.google.com/drive/folders/1KhwTPAG07EdaENW_XX9nVvKhC-DP1Ags?usp=sharing>
+
+Create a `data/` folder in the project root and put the file there, so you have:
+
+```
+data/data.csv
+```
+
+### Step 2: Create and activate a virtual environment
+
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+```
+
+### Step 3: Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4: Run the notebooks, in this order
+
+```bash
+jupyter notebook
+```
+
+| Order | Notebook | What it does | What it writes |
+|---|---|---|---|
+| 1 | `JT_EDA_Personality_Type_prediction.ipynb` | Explores the data and cleans it | `data/data_clean.csv` |
+| 2 | `JT_modeling.ipynb` | Compares and tunes four models, picks the champion | `models/personality_pipeline.joblib` |
+
+Run each one top to bottom. The modeling notebook takes about 5 minutes.
+
+Every step that involves randomness uses `random_state=42`, so these notebooks regenerate
+exactly the same model file on any machine.
+
+### Step 5: Run the Streamlit app
+
+```bash
+streamlit run app.py
+```
+
+It opens at <http://localhost:8501>. If the app reports that no model was found, notebook 2
+has not been run yet.
+
+---
+
+## 3. Repository structure
+
+```
+.
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── app.py                                        # the Streamlit app
+├── JT_EDA_Personality_Type_prediction.ipynb      # notebook 1: EDA and cleaning
+├── JT_modeling.ipynb                             # notebook 2: modeling and tuning
+├── data/                                         # NOT committed, see step 1
+│   ├── data.csv                                  #   downloaded from Drive
+│   └── data_clean.csv                            #   written by notebook 1
+├── models/                                       # NOT committed, written by notebook 2
+│   └── personality_pipeline.joblib
+└── results/                                      # written by notebook 2
+    ├── model_comparison.csv                      #   the full leaderboard
+    └── README_results.md                         #   the results block for this README
+```
+
+Neither the dataset nor the trained model is committed, as the project brief requires. Both
+are regenerated by following the setup steps.
+
+---
+
+## 4. Model comparison
+
+All four models were tuned with both methods. Selection metric: macro F1 under 5-fold
+stratified cross-validation on the training set. "Test" is the held-out 20%.
+
+| Model | Tuning | CV F1 macro | Test F1 macro |
+|---|---|---|---|
+| **HistGradientBoosting** | **grid search** | **0.804** | **0.799** |
+| HistGradientBoosting | hyperopt | 0.802 | 0.796 |
+| HistGradientBoosting | none | 0.795 | — |
+| Random Forest | grid search | 0.786 | 0.795 |
+| Random Forest | hyperopt | 0.785 | 0.793 |
+| Logistic Regression | hyperopt | 0.785 | 0.780 |
+| Logistic Regression | grid search | 0.785 | 0.780 |
+| Logistic Regression | none | 0.766 | — |
+| K-Nearest Neighbors | hyperopt | 0.741 | 0.750 |
+| K-Nearest Neighbors | grid search | 0.740 | 0.743 |
+| Random Forest | none | 0.740 | — |
+| K-Nearest Neighbors | none | 0.730 | — |
+
+**Undercontroller is the hardest class for every model.** It is defined by low
+Conscientiousness *and* low Agreeableness, but only two of the 19 statements (`C4` and `A4`)
+measure those traits, so most of the signal needed to identify it was removed when the original
+50-item questionnaire was reduced to 19. `class_weight='balanced'`, which both searches chose,
+lifts its recall from 0.42 to 0.66 at the cost of a little overall accuracy. That is the
+trade-off macro F1 is meant to reward.
+
+---
+
+## 5. Data source
+
+Big Five (OCEAN) personality test data, published on Kaggle and prepared for this course.
+Download link in step 1 above.
+
+*This is a student project for a machine-learning course. The model recognises patterns in
+questionnaire answers and is not a psychological or diagnostic tool.*
