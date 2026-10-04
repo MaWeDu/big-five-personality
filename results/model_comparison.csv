@@ -1,0 +1,13 @@
+model,tuning,cv_f1_macro,cv_accuracy,test_f1_macro,seconds
+HistGradientBoosting,grid search,0.8038,,0.7986,20.1
+HistGradientBoosting,hyperopt,0.8022,,0.7956,76.2
+HistGradientBoosting,none,0.7955,0.8565,,5.8
+Random Forest,grid search,0.7862,,0.7949,12.4
+Random Forest,hyperopt,0.7852,,0.7928,35.0
+Logistic Regression,hyperopt,0.7846,,0.7796,17.4
+Logistic Regression,grid search,0.7846,,0.7796,11.0
+Logistic Regression,none,0.7664,0.8522,,1.8
+K-Nearest Neighbors,hyperopt,0.7414,,0.7503,8.9
+K-Nearest Neighbors,grid search,0.7404,,0.7431,2.8
+Random Forest,none,0.7402,0.8362,,2.0
+K-Nearest Neighbors,none,0.7297,0.8124,,0.9
