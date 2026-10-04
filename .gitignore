@@ -1,7 +1,7 @@
 # Data and models are NOT committed (project brief §8).
 # Download the data from the Drive link in the README and run the notebooks
 # to regenerate both.
-data/
+
 models/
  
 # MLflow artifacts, if anyone experiments with it
