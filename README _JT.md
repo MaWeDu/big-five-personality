@@ -1,6 +1,6 @@
-# Personality Type Predictor 🌊
+# Personality Profile Predictor 🌊
 
-Predicts a person's OCEAN Big Five personality type from a short questionnaire, and serves the
+Predicts a person's Big Five personality profile from a short questionnaire, and serves the
 prediction through an ocean-themed Streamlit web app.
 
 ---
@@ -9,8 +9,8 @@ prediction through an ocean-themed Streamlit web app.
 
 **What this project does.** A user answers **19 short statements** (1 = Disagree to
 5 = Agree) and gives their age, gender and writing hand. A trained scikit-learn pipeline
-predicts one of four personality types and the app shows the result instantly, together
-with the probability the model assigns to each type.
+predicts one of four personality profiles and the app shows the result instantly, together
+with the probability the model assigns to each profile.
 
 **The problem.** This is a **supervised multi-class classification** task: given 22 features
 (19 questionnaire answers + 3 demographics), predict one of four classes. The classes are
@@ -25,7 +25,7 @@ the target.
 |---|---|
 | 19 item columns (`N1`–`N10`, `E1`, `E3`, `E4`, `E5`, `E7`, `E9`, `E10`, `C4`, `A4`) | The raw answer to one statement, 1–5 |
 | `age`, `gender`, `hand` | Age in years; Female/Male/Other; Right/Left/Both |
-| `target` | The personality type to predict |
+| `target` | The personality profile to predict |
 
 One row is one person. The letter in a column name is the trait the statement belongs to:
 **N** = Neuroticism (10 items), **E** = Extraversion (7), **C** = Conscientiousness (1),
@@ -33,33 +33,29 @@ One row is one person. The letter in a column name is the trait the statement be
 
 **The four target classes:**
 
-| Type | In a nutshell | Share of the data |
+| Profile | In a nutshell | Share of the data |
 |---|---|---|
 | **Moderate** | Balanced, no extreme traits | ~43% |
 | **Resilient** | Emotionally stable, calm under pressure | ~31% |
 | **Overcontroller** | Anxious and introverted | ~14% |
 | **Undercontroller** | Impulsive, less concerned with rules | ~12% |
 
-**The approach.** The project covers the full workflow: EDA and cleaning → preprocessing
-pipeline → model comparison with cross-validation → hyperparameter tuning with grid search and
-Hyperopt → a Streamlit app that loads the champion model.
+**The approach.** EDA → preprocessing pipeline → modeling and tuning → save the best model →
+Streamlit app.
 
-1. **EDA and cleaning** (`eda.ipynb`) explores the data and writes a cleaned dataset. It
-   removes rows with a missing or `0` value in `gender` or `hand`, rows with a `0` in the
-   question items (outside the 1–5 scale) and rows with impossible ages (three-digit ages and
-   other invalid values, up to 1,000,000,000). Some people typed in their birth year instead of
-   their age. Unlike the stricter `JT_EDA_Personality_Type_prediction.ipynb`, which deletes
-   these rows, `eda.ipynb` keeps the plausible birth years and converts them to ages, using
-   2017 as the base year of the data. In total 131 rows (0.66%) are removed, leaving 19,588 of
-   the 19,719 rows.
+1. **EDA** (`eda.ipynb`) explores the data and writes a cleaned dataset. It removes rows with a
+   missing or `0` value in `gender` or `hand`, rows with a `0` in the question items (outside
+   the 1–5 scale) and rows with impossible ages (three-digit ages and other invalid values,
+   up to 1,000,000,000). Ages that were typed in as a birth year are kept and converted to an
+   age, using 2017 as the survey year. In total 131 rows (0.66%) are removed, leaving
+   19,588 of the 19,719 rows.
 2. **One preprocessing pipeline**, a `ColumnTransformer` that imputes and scales the numeric
    columns and imputes and one-hot encodes the categorical ones, is shared by every model, so
    the comparison is fair.
 3. **Four models** (Logistic Regression, K-Nearest Neighbors, Random Forest,
    HistGradientBoosting), each in its own pipeline, are compared with 5-fold stratified
    cross-validation and then **each tuned twice**: with `GridSearchCV` and with Hyperopt.
-4. The **champion is saved with joblib** as the whole pipeline, preprocessing included, in
-   `models/personality_pipeline.joblib`.
+4. The **champion is saved with joblib** as the whole pipeline, preprocessing included.
 5. The **Streamlit app** loads that file and serves predictions. It never trains anything.
 
 **The result.**
@@ -76,8 +72,8 @@ Macro F1 rather than accuracy, because the classes are imbalanced: always predic
 "Moderate" already gives about 43% accuracy while learning nothing.
 
 **How to use the app.** Answer the 19 statements by clicking 1–5, set your age and gender,
-slide the writing-hand control, and press the button. You get your predicted type, the sea
-creature that matches it, an explanation, the probability for all four types, and how
+slide the writing-hand control, and press the button. You get your predicted profile, the sea
+creature that matches it, an explanation, the probability for all four profiles, and how
 your four trait scores compare with the average.
 
 ---
@@ -129,14 +125,6 @@ jupyter notebook
 | 2 | `modeling.ipynb` | Compares and tunes four models, picks the champion | `models/personality_pipeline.joblib` |
 
 Run each one top to bottom. The modeling notebook takes about 5 minutes.
-
-The modeling notebook creates the `models/` folder and saves the trained champion pipeline in
-it. The file is named `personality_pipeline.joblib` to match the project brief, and it is the
-file `app.py` loads:
-
-```python
-joblib.dump(best_pipeline, "models/personality_pipeline.joblib")
-```
 
 Every step that involves randomness uses `random_state=42`, so these notebooks regenerate
 exactly the same model file on any machine.
