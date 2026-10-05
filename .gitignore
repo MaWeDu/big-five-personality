@@ -1,14 +1,9 @@
 # Data and models are NOT committed (project brief §8).
 # Download the data from the Drive link in the README and run the notebooks
 # to regenerate both.
-
+data/
 models/
- 
-# MLflow artifacts, if anyone experiments with it
-mlflow.db
-mlruns/
-mlartifacts/
- 
+
 # Python
 __pycache__/
 *.py[cod]
@@ -33,4 +28,4 @@ Thumbs.db
 
 MP EDA Personality.ipynb
 MW_EDA.ipynb
-CJT_modeling.v3.ipynb
+eda.ipynb

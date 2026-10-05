@@ -1,0 +1,10 @@
+# Dark ocean theme for the Streamlit app (colours from the design mockup).
+# Streamlit reads this file automatically when you run `streamlit run app.py`
+# from the project folder.
+
+[theme]
+base = "dark"
+primaryColor = "#7FD4C4"
+backgroundColor = "#06202F"
+secondaryBackgroundColor = "#0B3A50"
+textColor = "#EAF4F7"
