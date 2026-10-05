@@ -4,10 +4,7 @@ Processed IPIP Big Five Dataset -- Codebook
 Personality item scale: 1=Disagree, 2=Slightly Disagree, 3=Neutral,
                         4=Slightly Agree, 5=Agree
 
-Each item column holds the participant's RAW answer to the statement
-(1-5). Reverse-scored items were only flipped temporarily to compute the
-OCEAN trait scores used to build the target; the values stored here match
-the literal question.
+Each item column holds the participant's RAW answer to the statement (1-5). Reverse-scored items were only flipped temporarily to compute the OCEAN trait scores used to build the target; the values stored here match the literal question.
 
 Personality Items
 ------------------
