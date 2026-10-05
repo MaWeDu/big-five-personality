@@ -4,11 +4,6 @@
 
 models/
  
-# MLflow artifacts, if anyone experiments with it
-mlflow.db
-mlruns/
-mlartifacts/
- 
 # Python
 __pycache__/
 *.py[cod]
