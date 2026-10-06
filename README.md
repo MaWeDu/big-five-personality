@@ -47,17 +47,16 @@ Hyperopt → a Streamlit app that loads the champion model.
 1. **EDA and cleaning** (`eda.ipynb`) explores the data and writes a cleaned dataset. It
    removes rows with a missing or `0` value in `gender` or `hand`, rows with a `0` in the
    question items (outside the 1–5 scale) and rows with impossible ages (three-digit ages and
-   other invalid values, up to 1,000,000,000). Some people typed in their birth year instead of
+   other invalid values, up to 999,000,000). Some people typed in their birth year instead of
    their age. Unlike the stricter `JT_EDA_Personality_Type_prediction.ipynb`, which deletes
    these rows, `eda.ipynb` keeps the plausible birth years and converts them to ages, using
-   2017 as the base year of the data. In total 131 rows (0.66%) are removed, leaving 19,588 of
-   the 19,719 rows.
+   2017 as the base year of the survey data. In total 131 rows (0.66%) are removed, leaving 19,588 of the 19,719 rows.
 2. **One preprocessing pipeline**, a `ColumnTransformer` that imputes and scales the numeric
    columns and imputes and one-hot encodes the categorical ones, is shared by every model, so
    the comparison is fair.
 3. **Four models** (Logistic Regression, K-Nearest Neighbors, Random Forest,
    HistGradientBoosting), each in its own pipeline, are compared with 5-fold stratified
-   cross-validation and then **each tuned twice**: with `GridSearchCV` and with Hyperopt.
+   cross-validation and then **each tuned twice**: with `GridSearchCV` and with `Hyperopt`.
 4. The **champion is saved with joblib** as the whole pipeline, preprocessing included, in
    `models/personality_pipeline.joblib`.
 5. The **Streamlit app** loads that file and serves predictions. It never trains anything.
@@ -89,7 +88,9 @@ Python 3.11 or newer.
 
 ### Step 1: Get the data
 
-The dataset is **not** in this repository. Download it from the project Drive folder:
+The dataset is **not** in this repository. Simply running the eda.ipynb will create a DATA folder and download the file in it.
+
+Alternative: Download it from the project Drive folder:
 
 <https://drive.google.com/drive/folders/1KhwTPAG07EdaENW_XX9nVvKhC-DP1Ags?usp=sharing>
 
@@ -218,5 +219,4 @@ trade-off macro F1 is meant to reward.
 Big Five (OCEAN) personality test data, published on Kaggle and prepared for this course.
 Download link in step 1 above.
 
-*This is a student project for a machine-learning course. The model recognises patterns in
-questionnaire answers and is not a psychological or diagnostic tool.*
+*This is a student project for a machine-learning course. The model recognizes patterns in questionnaire answers and is not a psychological or diagnostic tool.*
