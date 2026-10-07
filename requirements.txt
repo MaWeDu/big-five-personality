@@ -12,3 +12,4 @@ gdown==6.4.1
 ipywidgets==8.1.9
 notebook==7.6.3
 ipykernel==7.3.0
+ipython==9.17.1
