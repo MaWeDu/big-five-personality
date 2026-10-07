@@ -49,19 +49,20 @@ Hyperopt → a Streamlit app that loads the champion model.
    question items (outside the 1–5 scale) and rows with impossible ages (three-digit ages and
    other invalid values, up to 999,000,000). Some people typed in their birth year instead of
    their age. As a group, we combined the best ideas from everyone into one consolidated `eda.ipynb`;
-   the individual notebooks keep slightly different versions, tests and assumptions. For example, unlike the stricter `JT_EDA_Personality_Type_prediction.ipynb`, which deletes
+   the individual folders with notebooks keep slightly different versions, tests and assumptions.
+   For example, unlike the stricter `JT_EDA_Personality_Type_prediction.ipynb`, which deletes
    these rows, `eda.ipynb` keeps the plausible birth years and converts them to ages, using
    2017 as the base year of the survey data. In total 131 rows (0.66%) are removed, leaving 19,588 of the 19,719 rows.
-2. **One preprocessing pipeline**, a `ColumnTransformer` that imputes and scales the numeric
+3. **One preprocessing pipeline**, a `ColumnTransformer` that imputes and scales the numeric
    columns and imputes and one-hot encodes the categorical ones, is shared by every model, so
    the comparison is fair.
-3. **Five models** (Logistic Regression, K-Nearest Neighbors, Random Forest,
+4. **Five models** (Logistic Regression, K-Nearest Neighbors, Random Forest,
    HistGradientBoosting and CatBoost), each in its own pipeline, are first compared with their
    default settings (untuned) under 5-fold stratified cross-validation and then **tuned**: all five with `GridSearchCV`, the four faster
    ones also with `Hyperopt` (CatBoost is left out of Hyperopt because it trains much slower).
-4. The **champion is saved with joblib** as the whole pipeline, preprocessing included, in
+5. The **champion is saved with joblib** as the whole pipeline, preprocessing included, in
    `models/personality_pipeline.joblib`.
-5. The **Streamlit app** loads that file and serves predictions. It never trains anything.
+6. The **Streamlit app** loads that file and serves predictions. It never trains anything.
 
 **The result.**
 
