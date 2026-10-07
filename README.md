@@ -48,19 +48,21 @@ Hyperopt → a Streamlit app that loads the champion model.
    removes rows with a missing or `0` value in `gender` or `hand`, rows with a `0` in the
    question items (outside the 1–5 scale) and rows with impossible ages (three-digit ages and
    other invalid values, up to 999,000,000). Some people typed in their birth year instead of
-   their age. Unlike the stricter `JT_EDA_Personality_Type_prediction.ipynb`, which deletes
+   their age. As a group, we combined the best ideas from everyone into one consolidated `eda.ipynb`;
+   the individual folders with notebooks keep slightly different versions, tests and assumptions.
+   For example, unlike the stricter `JT_EDA_Personality_Type_prediction.ipynb`, which deletes
    these rows, `eda.ipynb` keeps the plausible birth years and converts them to ages, using
    2017 as the base year of the survey data. In total 131 rows (0.66%) are removed, leaving 19,588 of the 19,719 rows.
-2. **One preprocessing pipeline**, a `ColumnTransformer` that imputes and scales the numeric
+3. **One preprocessing pipeline**, a `ColumnTransformer` that imputes and scales the numeric
    columns and imputes and one-hot encodes the categorical ones, is shared by every model, so
    the comparison is fair.
-3. **Five models** (Logistic Regression, K-Nearest Neighbors, Random Forest,
-   HistGradientBoosting and CatBoost), each in its own pipeline, are compared with 5-fold
-   stratified cross-validation and then **tuned**: all five with `GridSearchCV`, the four faster
+4. **Five models** (Logistic Regression, K-Nearest Neighbors, Random Forest,
+   HistGradientBoosting and CatBoost), each in its own pipeline, are first compared with their
+   default settings (untuned) under 5-fold stratified cross-validation and then **tuned**: all five with `GridSearchCV`, the four faster
    ones also with `Hyperopt` (CatBoost is left out of Hyperopt because it trains much slower).
-4. The **champion is saved with joblib** as the whole pipeline, preprocessing included, in
+5. The **champion is saved with joblib** as the whole pipeline, preprocessing included, in
    `models/personality_pipeline.joblib`.
-5. The **Streamlit app** loads that file and serves predictions. It never trains anything.
+6. The **Streamlit app** loads that file and serves predictions. It never trains anything.
 
 **The result.**
 
@@ -85,73 +87,98 @@ your four trait scores compare with the average.
 
 ## 2. Setup
 
-Everything below assumes you have just cloned this repository and have nothing else.
-Python 3.12 or newer (developed with Python 3.14).
+These steps start from zero. We used **Python 3.14** and **VS Code**. Every command below is typed
+in a terminal **inside the project folder**.
+
+Get the project first:
+
+```bash
+git clone https://github.com/MaWeDu/big-five-personality.git
+cd big-five-personality
+```
+
+No Git? On the GitHub page, click **Code → Download ZIP** and unzip it.
 
 ### Step 1: Get the data
 
-The dataset is **not** in this repository. Simply running `eda.ipynb` creates a `data/` folder and downloads the file into it.
+The dataset is **not** in this repository, and you don't need to download it yourself:
+`eda.ipynb` (step 4) creates a `data/` folder and downloads the file into it.
 
-Alternative: Download it from the project Drive folder:
+Alternative: download it from the project Drive folder and save it in the project as `data/data.csv`:
 
 <https://drive.google.com/drive/folders/1KhwTPAG07EdaENW_XX9nVvKhC-DP1Ags?usp=sharing>
 
-Create a `data/` folder in the project root and put the file there, so you have:
+### Step 2: Install Python and VS Code, then create the virtual environment
 
-```
-data/data.csv
-```
-
-### Step 2: Create and activate a virtual environment
+1. **Python 3.14:** download it from <https://www.python.org/downloads/> and install it.
+   On Windows, tick **"Add python.exe to PATH"** in the first window of the installer.
+2. **VS Code:** download it from <https://code.visualstudio.com/> and install it. Then add the
+   **Python** and **Jupyter** extensions (Extensions icon in the left sidebar).
+3. In VS Code, open the project folder (**File → Open Folder…**) and open a terminal
+   (**Terminal → New Terminal**). The terminal starts in the project folder.
+4. Create the virtual environment (`venv`) and activate it:
 
 ```bash
-python -m venv venv
-
 # Windows
+python -m venv venv
 venv\Scripts\activate
 
 # macOS / Linux
+python3 -m venv venv
 source venv/bin/activate
 ```
 
+When it is active, the terminal line starts with `(venv)`.
+
+> **Windows:** if `python` is not found, use `py -3.14 -m venv venv`. If PowerShell blocks the
+> activation, run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once, then activate again.
+
 ### Step 3: Install the dependencies
+
+In the same terminal, with `(venv)` shown and still in the project folder:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4: Run the notebooks, in this order
+This installs the exact package versions we used (pandas, scikit-learn, CatBoost, Hyperopt,
+Streamlit, Jupyter, …) into the virtual environment. It takes a few minutes.
 
-```bash
-jupyter notebook
-```
+### Step 4: Run the notebooks in the virtual environment, in this order
+
+1. Open `eda.ipynb` in VS Code. Click **Select Kernel** (top right) → **Python Environments** →
+   **venv**, then click **Run All**.
+2. Open `modeling.ipynb`, select the same **venv** kernel and click **Run All**.
 
 | Order | Notebook | What it does | What it writes |
 |---|---|---|---|
-| 1 | `eda.ipynb` | Explores the data and cleans it | `data/data_clean.csv` |
-| 2 | `modeling.ipynb` | Compares and tunes five models, picks the champion, checks the saved file | `models/personality_pipeline.joblib` |
+| 1 | `eda.ipynb` | Downloads the data, explores it and cleans it | `data/data_clean.csv` |
+| 2 | `modeling.ipynb` | Compares and tunes five models, picks the champion, saves and checks it | `models/personality_pipeline.joblib` |
 
-Run each one top to bottom. The modeling notebook takes about 5 to 10 minutes.
-
-The modeling notebook creates the `models/` folder and saves the trained champion pipeline in
-it. The file is named `personality_pipeline.joblib` to match the project brief, and it is the
-file `app.py` loads:
+The modeling notebook takes about 5 to 10 minutes. It saves the complete trained pipeline
+(preprocessing + tuned CatBoost) under the file name from the project brief, the file `app.py` loads:
 
 ```python
 joblib.dump(best_pipeline, "models/personality_pipeline.joblib")
 ```
 
-Every step that involves randomness uses `random_state=42`, so these notebooks regenerate
-exactly the same model file on any machine.
+Every step that involves randomness uses `random_state=42`, so the notebooks recreate exactly
+the same model file on any machine.
+
+*Without VS Code:* run `jupyter notebook` in the activated terminal and open the two notebooks
+in the browser that opens.
 
 ### Step 5: Run the Streamlit app
+
+In the VS Code terminal (or any terminal), with `(venv)` active and inside the project folder:
 
 ```bash
 streamlit run app.py
 ```
 
-It opens at <http://localhost:8501>. If the app reports that no model was found, notebook 2
-has not been run yet.
+It opens at <http://localhost:8501>; if no browser window opens, copy that address into your
+browser. Stop the app with **Ctrl + C** in the terminal. If the app reports that no model was
+found, notebook 2 has not been run yet.
 
 ---
 
@@ -167,6 +194,7 @@ has not been run yet.
 │   └── config.toml                               # dark ocean theme for the app
 ├── eda.ipynb                                     # notebook 1: EDA and cleaning
 ├── modeling.ipynb                                # notebook 2: modeling and tuning
+├── venv/                                         # NOT committed, created in step 2
 ├── data/                                         # NOT committed, see step 1
 │   ├── data.csv                                  #   downloaded from Drive
 │   └── data_clean.csv                            #   written by notebook 1
@@ -194,20 +222,20 @@ held-out 20%.
 | Model | Tuning | CV F1 macro | Test F1 macro |
 |---|---|---|---|
 | **CatBoost** | **grid search** | **0.819** | **0.823** |
-| CatBoost | none | 0.806 | 0.811 |
+| CatBoost | untuned | 0.806 | 0.811 |
 | HistGradientBoosting (balanced) | grid search | 0.803 | 0.800 |
 | HistGradientBoosting | hyperopt | 0.798 | 0.805 |
 | HistGradientBoosting | grid search | 0.798 | 0.807 |
-| HistGradientBoosting | none | 0.797 | 0.805 |
+| HistGradientBoosting | untuned | 0.797 | 0.805 |
 | Logistic Regression | grid search | 0.767 | 0.780 |
 | Logistic Regression | hyperopt | 0.767 | 0.779 |
-| Logistic Regression | none | 0.767 | 0.779 |
+| Logistic Regression | untuned | 0.767 | 0.779 |
 | Random Forest | grid search | 0.741 | 0.761 |
-| Random Forest | none | 0.741 | 0.760 |
+| Random Forest | untuned | 0.741 | 0.760 |
 | Random Forest | hyperopt | 0.740 | 0.760 |
 | K-Nearest Neighbors | grid search | 0.739 | 0.742 |
 | K-Nearest Neighbors | hyperopt | 0.731 | 0.735 |
-| K-Nearest Neighbors | none | 0.726 | 0.716 |
+| K-Nearest Neighbors | untuned | 0.726 | 0.716 |
 
 **Undercontroller is the hardest class for every model.** It is defined by low
 Conscientiousness *and* low Agreeableness, but only two of the 19 statements (`C4` and `A4`)
