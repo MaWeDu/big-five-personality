@@ -22,9 +22,3 @@ Thumbs.db
  
 # Streamlit
 .streamlit/secrets.toml
- 
-
-*.pyc
-
-MP EDA Personality.ipynb
-MW_EDA.ipynb
