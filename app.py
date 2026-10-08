@@ -21,6 +21,61 @@ def css():
 .block-container {{
     padding-top: 0.75rem !important;
 }}
+
+    /* Readable text and inputs */
+    [data-testid="stVerticalBlockBorderWrapper"] > div[data-testid="stVerticalBlock"]{{
+        background:rgba(255,255,255,.94);border-radius:18px;
+    }}
+    [data-testid="stVerticalBlockBorderWrapper"]{{
+        background:rgba(255,255,255,.94)!important;
+        border:1px solid #d7e5e9!important;border-radius:20px!important;
+        box-shadow:0 12px 30px #063b4c20;
+    }}
+    [data-testid="stVerticalBlockBorderWrapper"] p,
+    [data-testid="stVerticalBlockBorderWrapper"] label,
+    [data-testid="stVerticalBlockBorderWrapper"] h3{{color:#073b4c!important}}
+    [data-testid="stNumberInput"] input,
+    [data-testid="stSelectbox"] [data-baseweb="select"]>div{{
+        background:#fff!important;color:#073b4c!important;
+        border:1px solid #a9bec5!important;
+    }}
+    [data-testid="stSlider"] [data-baseweb="slider"] [role="slider"]{{
+        background:transparent!important;border:0!important;
+        box-shadow:0 1px 5px #003b4b70;
+    }}
+    [data-testid="stSlider"] [data-baseweb="slider"]>div>div{{
+        color:#007da3!important;
+    }}
+    [data-testid="stButton"] button[kind="secondary"]{{
+        background:#00658e!important;color:white!important;
+        border:1px solid #005678!important;
+    }}
+    [data-testid="stButton"] button[kind="secondary"] p{{color:white!important}}
+    
+    /* Profile card */
+    div[data-testid="stForm"]{{background:rgba(255,255,255,.96)!important;border:1px solid #dce8ec!important;border-radius:20px!important;padding:1.5rem!important;box-shadow:0 12px 30px #063b4c26!important}}
+    div[data-testid="stForm"] label,div[data-testid="stForm"] p,div[data-testid="stForm"] h3{{color:#073b4c!important}}
+    /* Hide slider values and replace the handle with a hand */
+    [data-testid="stSlider"] [data-testid="stThumbValue"],
+    [data-testid="stSlider"] [data-testid="stSliderThumbValue"],
+    [data-testid="stSlider"] [data-testid="stTickBar"],
+    [data-testid="stSlider"] [data-testid="stSliderTickBar"],
+    [data-testid="stSlider"] [role="slider"] > div {{display:none!important}}
+    [data-testid="stSlider"] [role="slider"],
+    [data-testid="stSlider"] [data-baseweb="slider"] [role="slider"] {{
+        background:transparent!important;border:none!important;box-shadow:none!important;
+        width:34px!important;height:38px!important;overflow:visible!important;
+        position:relative!important;
+    }}
+    [data-testid="stSlider"] [role="slider"]::before {{
+        content:"✋"!important;display:block!important;position:absolute!important;
+        left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;
+        font-size:29px!important;line-height:1!important;pointer-events:none!important;
+        filter:drop-shadow(0 2px 2px #073b4c66);
+    }}
+    [data-testid="stSlider"] [role="slider"]:focus-visible {{outline:2px solid #00658e!important;outline-offset:4px}}
+    div[data-testid="stForm"] [data-testid="stFormSubmitButton"] button{{background:#00658e!important;color:white!important}}
+    div[data-testid="stForm"] [data-testid="stFormSubmitButton"] button p{{color:white!important}}
 </style>''',unsafe_allow_html=True)
 def t(k): return UI[st.session_state.lang][k]
 def go(test): st.session_state.update(test=test,step=0,answers={},page='profile')
@@ -60,23 +115,26 @@ def profile():
         st.markdown(f"<section class='hero'><h1>{t('profile_title')}</h1><p>{t('profile_text')}</p></section>",unsafe_allow_html=True)
         st.button('← '+t('back_home'),on_click=lambda:st.session_state.update(page='welcome'))
     with right:
-        with st.form('profile_form'):
+        with st.form('profile_form',enter_to_submit=False):
             st.markdown(f"<h3 class='profile-form-title'>{t('profile_form_title')}</h3>",unsafe_allow_html=True)
-            age=st.number_input(t('age'),min_value=1,max_value=100,value=25,step=1)
-            gender_label=st.selectbox(t('gender'),[t('female'),t('male'),t('other')])
+            age=st.number_input(t('age'),min_value=1,max_value=100,value=25,step=1,key='profile_age')
+            gender_options=['Female','Male','Other']
+            gender_label=st.selectbox(t('gender'),gender_options,format_func=lambda x: {'Female':t('female'),'Male':t('male'),'Other':t('other')}[x],key='profile_gender')
 
-            st.markdown(f"<div style='font-weight:700;color:#073b4c;margin-top:.45rem'>{t('hand')}</div><div class='hand-icon'>✋</div><div class='hand-scale-labels'><span>{t('left_hand')}</span><span>{t('both_hands')}</span><span>{t('right_hand')}</span></div>",unsafe_allow_html=True)
-            hand_value=st.select_slider(
+            st.markdown(f"<div style='font-weight:700;color:#073b4c;margin-top:.45rem'>{t('hand')}</div><div class='hand-scale-labels'><span>{t('left_hand')}</span><span>{t('both_hands')}</span><span>{t('right_hand')}</span></div>",unsafe_allow_html=True)
+            hand_value=st.slider(
                 t('hand'),
-                options=[0,1,2],
+                min_value=0,
+                max_value=2,
                 value=2,
-                format_func=lambda _: "",
-                label_visibility='collapsed'
+                step=1,
+                label_visibility='collapsed',
+                key='hand_position'
             )
             hand_map={0:'Left',1:'Both',2:'Right'}
 
             if st.form_submit_button(t('continue'),use_container_width=True):
-                st.session_state.demographics={'age':age,'gender':{t('female'):'Female',t('male'):'Male',t('other'):'Other'}[gender_label],'hand':hand_map[hand_value]}
+                st.session_state.demographics={'age':age,'gender':gender_label,'hand':hand_map[hand_value]}
                 st.session_state.page='test'; st.rerun()
 
 def feature_frame(test, answers):
@@ -103,7 +161,9 @@ def test():
             unsafe_allow_html=True
         )
         st.markdown(f"<section class='question'><h2>{q['text'][st.session_state.lang]}</h2></section>",unsafe_allow_html=True)
-        old=st.session_state.answers.get(q['id']);opts=[1,2,3,4,5];answer=st.radio(t('answer'),opts,index=opts.index(old) if old else None,format_func=lambda v:f"{v}   {LIKERT[st.session_state.lang][v]}",label_visibility='collapsed')
+        old=st.session_state.answers.get(q['id'])
+        opts=[1,2,3,4,5]
+        answer=st.radio(t('answer'),opts,index=opts.index(old) if old is not None else None,format_func=lambda v:f"{v}   {LIKERT[st.session_state.lang][v]}",label_visibility='collapsed',key=f"answer_{st.session_state.test}_{q['id']}_{st.session_state.lang}")
         a,b=st.columns(2)
         with a:
             if i and st.button('← '+t('previous'),use_container_width=True): st.session_state.step-=1;st.rerun()
