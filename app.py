@@ -55,25 +55,37 @@ def css():
     /* Profile card */
     div[data-testid="stForm"]{{background:rgba(255,255,255,.96)!important;border:1px solid #dce8ec!important;border-radius:20px!important;padding:1.5rem!important;box-shadow:0 12px 30px #063b4c26!important}}
     div[data-testid="stForm"] label,div[data-testid="stForm"] p,div[data-testid="stForm"] h3{{color:#073b4c!important}}
-    /* Hide slider values and replace the handle with a hand */
-    [data-testid="stSlider"] [data-testid="stThumbValue"],
-    [data-testid="stSlider"] [data-testid="stSliderThumbValue"],
-    [data-testid="stSlider"] [data-testid="stTickBar"],
-    [data-testid="stSlider"] [data-testid="stSliderTickBar"],
-    [data-testid="stSlider"] [role="slider"] > div {{display:none!important}}
-    [data-testid="stSlider"] [role="slider"],
-    [data-testid="stSlider"] [data-baseweb="slider"] [role="slider"] {{
-        background:transparent!important;border:none!important;box-shadow:none!important;
-        width:34px!important;height:38px!important;overflow:visible!important;
+    /* Hand slider */
+    .st-key-hand [data-testid="stThumbValue"],
+    .st-key-hand [data-testid="stSliderThumbValue"],
+    .st-key-hand [data-testid="stTickBar"],
+    .st-key-hand [data-testid="stSliderTickBar"],
+    .st-key-hand [role="slider"] > div,
+    .st-key-hand [role="slider"] > span {{
+        display:none!important;
+    }}
+    .st-key-hand [role="slider"],
+    .st-key-hand [data-baseweb="slider"] [role="slider"] {{
         position:relative!important;
+        width:38px!important;height:38px!important;
+        background:transparent!important;border:0!important;
+        box-shadow:none!important;overflow:visible!important;
     }}
-    [data-testid="stSlider"] [role="slider"]::before {{
-        content:"✋"!important;display:block!important;position:absolute!important;
-        left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;
-        font-size:29px!important;line-height:1!important;pointer-events:none!important;
-        filter:drop-shadow(0 2px 2px #073b4c66);
+    .st-key-hand [role="slider"]::after,
+    .st-key-hand div:has(> div > input[type="range"])::after {{
+        content:"🖐"!important;position:absolute!important;
+        left:50%;top:50%;transform:translate(-50%,-50%);
+        font-size:29px;line-height:1;pointer-events:none;
+        filter:drop-shadow(0 2px 4px rgba(0,0,0,.4));
     }}
-    [data-testid="stSlider"] [role="slider"]:focus-visible {{outline:2px solid #00658e!important;outline-offset:4px}}
+    .st-key-hand [role="slider"]:focus-visible {{
+        outline:2px solid #00658e!important;outline-offset:3px;
+    }}
+    /* Remove default number bubbles and tick labels */
+    .st-key-hand [data-testid="stSlider"] [data-testid*="ThumbValue"],
+    .st-key-hand [data-testid="stSlider"] [data-testid*="TickBar"] {{
+        display:none!important;
+    }}
     div[data-testid="stForm"] [data-testid="stFormSubmitButton"] button{{background:#00658e!important;color:white!important}}
     div[data-testid="stForm"] [data-testid="stFormSubmitButton"] button p{{color:white!important}}
 </style>''',unsafe_allow_html=True)
@@ -129,7 +141,7 @@ def profile():
                 value=2,
                 step=1,
                 label_visibility='collapsed',
-                key='hand_position'
+                key='hand'
             )
             hand_map={0:'Left',1:'Both',2:'Right'}
 
