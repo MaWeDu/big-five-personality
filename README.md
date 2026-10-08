@@ -180,18 +180,15 @@ It opens at <http://localhost:8501>; if no browser window opens, copy that addre
 browser. Stop the app with **Ctrl + C** in the terminal. If the app reports that no model was
 found, notebook 2 has not been run yet.
 
----
-
 ### One more thing: one-click launch
 
-On Windows, there is an easier way.
-
-Double-click **Start Personality Predictor** (or `start.bat`) in the project folder.
-On its first run, the launcher creates the virtual environment, installs the dependencies, prepares the data, trains the model, and starts the Streamlit app.
-
-After that, it is simply one click to return to the ocean.
-
-The manual steps below remain available if you prefer to run the notebooks yourself, inspect the workflow, or change the model.
+> On Windows, there is an easier way.
+> Double-click **Start Personality Predictor** (or `start.bat`) in the project folder.
+> On its first run, the launcher creates the virtual environment, installs the dependencies, prepares the data, trains the model, and starts the Streamlit app.
+> 
+> After that, it is simply one click to return to the ocean.
+>
+> The manual steps below remain available if you prefer to run the notebooks yourself, inspect the workflow, or change the model.
 
 ---
 
