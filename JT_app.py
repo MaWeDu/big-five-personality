@@ -1,10 +1,12 @@
 """
 Big Five (OCEAN) Personality Test: the Streamlit app for the Personality Type Predictor.
 
-The app loads the trained pipeline that modeling.ipynb saved as models/personality_pipeline.joblib and predicts one of four Big Five personality
+The app loads the trained pipeline that modeling.ipynb saved as
+models/personality_pipeline.joblib and predicts one of four Big Five personality
 types from 19 questionnaire answers plus age, gender and writing hand.
 
-It does NOT train anything and does not read the dataset. It only loads the saved pipeline, collects the answers and shows the prediction, which is what
+It does NOT train anything and does not read the dataset. It only loads the
+saved pipeline, collects the answers and shows the prediction, which is what
 the project brief asks for.
 
 Run it with:    streamlit run app.py
@@ -166,13 +168,46 @@ TRAITS = [
 
 
 def html(markup):
-    """Show a block of HTML. Lines are un-indented first, because Streamlit's markdown would otherwise turn indented lines into a code block."""
+    """Show a block of HTML. Lines are un-indented first, because Streamlit's
+    markdown would otherwise turn indented lines into a code block."""
     lines = [line.strip() for line in markup.splitlines() if line.strip()]
     st.markdown("\n".join(lines), unsafe_allow_html=True)
 
 
+def scroll_to_top():
+    """Jump to the top of the page.
+
+    Streamlit keeps the scroll position when the screen changes. Without this,
+    the result page would open halfway down, where the button was clicked.
+    A tiny script scrolls the page back up; it runs once per screen change.
+    """
+    st.session_state.page_turns += 1    # makes the script new every time, so it runs again
+    script = f"""
+    <script>
+    // page turn {st.session_state.page_turns}
+    (function () {{
+      const page = window.parent.document;
+      function toTop() {{
+        window.parent.scrollTo(0, 0);
+        // the part of the page that scrolls (its name differs between Streamlit versions)
+        page.querySelectorAll('[data-testid="stMain"], [data-testid="stAppViewContainer"], section.main')
+            .forEach(function (el) {{ el.scrollTo(0, 0); }});
+      }}
+      toTop();
+      setTimeout(toTop, 150);   // once more, after the new screen has finished drawing
+    }})();
+    </script>
+    """
+    with st.container(key="scrolltop"):
+        try:
+            st.html(script, unsafe_allow_javascript=True)       # newer Streamlit versions
+        except TypeError:
+            import streamlit.components.v1 as components       # older Streamlit versions
+            components.html(script, height=0)
+
+
 # --------------------------------------------------------------------------
-# 2. Ocean styling with HTML
+# 2. Ocean styling (colours, fonts and fish taken from the design mockup)
 # --------------------------------------------------------------------------
 
 html("""
@@ -312,6 +347,13 @@ html("""
 .st-key-hand [data-testid="stSliderTickBarMin"], .st-key-hand [data-testid="stSliderTickBarMax"],
 .st-key-hand [data-testid="stTickBarMin"], .st-key-hand [data-testid="stTickBarMax"] { color: #8FB8C6 !important; }
 
+/* --- age box: a "Press Enter to apply" hint while the box is selected --- */
+.st-key-age [data-testid="stNumberInput"] { position: relative; }
+.st-key-age [data-testid="stNumberInput"]:focus-within::after {
+  content: "Press Enter to apply"; position: absolute; right: 2px; bottom: -21px;
+  font-size: 12.5px; color: #8FB8C6;
+}
+
 /* --- buttons --- */
 .stApp [data-testid="stFormSubmitButton"] button, .stApp [data-testid="stButton"] button {
   background: #7FD4C4; color: #06202F; border: 0; border-radius: 12px;
@@ -324,6 +366,19 @@ html("""
   background: #A5E6DA; color: #06202F;
 }
 [data-testid="stForm"] { border: 0; padding: 0; }
+
+/* the small back button at the top of the result page: outlined instead of filled */
+.stApp .st-key-back_top [data-testid="stButton"] button {
+  width: auto; background: transparent; border: 1px solid rgba(127,212,196,0.55);
+  border-radius: 99px; padding: 0.4rem 1.1rem; min-height: 0;
+}
+.stApp .st-key-back_top [data-testid="stButton"] button p { color: #7FD4C4 !important; font-size: 14.5px; font-weight: 600; }
+.stApp .st-key-back_top [data-testid="stButton"] button:hover { background: rgba(127,212,196,0.15); }
+
+/* the scroll-to-top script takes no space on the page */
+.st-key-scrolltop, [data-testid="stLayoutWrapper"]:has(> .st-key-scrolltop) {
+  position: absolute; height: 0; overflow: hidden; margin: 0; padding: 0;
+}
 
 /* --- the fish --- */
 .swim { animation: swim 3.2s ease-in-out infinite; }
@@ -396,8 +451,9 @@ html("""
 """)
 
 
-# Color each answer button with its step of the scale (1 = warm ... 5 = teal).
-# The selected button is filled with that color. Two selectors per rule, because the button sits one level deeper in newer Streamlit versions.
+# Colour each answer button with its step of the scale (1 = warm ... 5 = teal).
+# The selected button is filled with that colour. Two selectors per rule, because
+# the button sits one level deeper in newer Streamlit versions.
 scale_css = ""
 for position, _, colour in SCALE:
     rows = f'[class*="st-key-q_"] [role="radiogroup"] > :nth-child({position})'
@@ -486,7 +542,8 @@ html("""
 if not MODEL_PATH.exists():
     st.error(
         "No trained model found at `models/personality_pipeline.joblib`.\n\n"
-        "Run the notebooks first (see the README): `eda.ipynb` creates `data/data_clean.csv`, and `modeling.ipynb` trains the pipeline and saves it."
+        "Run the notebooks first (see the README): `eda.ipynb` creates `data/data_clean.csv`, "
+        "and `modeling.ipynb` trains the pipeline and saves it."
     )
     st.stop()
 
@@ -496,16 +553,28 @@ model = load_model(MODEL_PATH)
 # 4. Remember the answers between the two screens
 # --------------------------------------------------------------------------
 # "form" = the questionnaire (step 1), "result" = the prediction (step 2).
-# The answers are kept, so "Change my answers" comes back with them filled in.
+# The answers are kept, so going back to the questionnaire shows them filled in.
 
 if "screen" not in st.session_state:
     st.session_state.screen = "form"
     st.session_state.inputs = {"age": 29, "gender": "Female", "hand": "Right"}
     st.session_state.inputs.update({code: 3 for code in ALL_CODES})   # every answer starts at Neutral
 
+if "go_to_top" not in st.session_state:
+    st.session_state.go_to_top = False    # True right after the screen has changed
+    st.session_state.page_turns = 0       # counts the screen changes (used by scroll_to_top)
+
 
 def back_to_form():
+    """Used by both back buttons on the result page."""
     st.session_state.screen = "form"
+    st.session_state.go_to_top = True
+
+
+# Right after a screen change, start at the top of the new screen
+if st.session_state.go_to_top:
+    scroll_to_top()
+    st.session_state.go_to_top = False
 
 
 # --------------------------------------------------------------------------
@@ -540,20 +609,21 @@ if st.session_state.screen == "form":
     )
     html(f"""
     <div style="margin:4px 0 2px"><span class="reef-h2" style="font-size:22px">Four possible results</span></div>
-    <p class="reef-soft" style="margin:0">The model predicts one of these four personality types. 
-    Each type is paired with a sea creature as its symbol, a small nod to the OCEAN model. 
-    </p>
+    <p class="reef-soft" style="margin:0">The model predicts one of these four personality types. Each one is
+    shown with a sea creature as its symbol.</p>
     <div class="reef-types">{type_cards}</div>
     """)
 
-    with st.form("questionnaire", border=False):
+    # enter_to_submit=False: pressing Enter in the age box only applies the age.
+    # The form is sent only with the button at the bottom.
+    with st.form("questionnaire", border=False, enter_to_submit=False):
 
         # --- About you ---
         with st.container(key="about"):
             html('<p class="reef-card-title">About you</p>')
             col_age, col_gender = st.columns(2)
             age = col_age.number_input("Age", min_value=13, max_value=100,
-                                       value=int(saved["age"]), step=1)
+                                       value=int(saved["age"]), step=1, key="age")
             gender = col_gender.radio("Gender", GENDERS, horizontal=True, key="gender",
                                       index=GENDERS.index(saved["gender"]))
             # A slider rather than a dropdown: writing hand goes from left to right.
@@ -623,6 +693,7 @@ if st.session_state.screen == "form":
     if submitted:
         st.session_state.inputs = {"age": int(age), "gender": gender, "hand": hand, **answers}
         st.session_state.screen = "result"
+        st.session_state.go_to_top = True    # open the result page at the top
         st.rerun()
 
 # --------------------------------------------------------------------------
@@ -637,7 +708,9 @@ else:
     if hasattr(model, "feature_names_in_"):
         X_new = X_new.reindex(columns=model.feature_names_in_)
 
-    prediction = model.predict(X_new)[0]
+    # .ravel() flattens the result first: most models return ["Moderate"],
+    # but CatBoost returns [["Moderate"]] (one extra layer), which would break the lookup below
+    prediction = str(model.predict(X_new).ravel()[0])
     info = PROFILES[prediction]
 
     probabilities = None
@@ -649,9 +722,12 @@ else:
         if probabilities else ""
     )
 
+    # --- Back button at the top (the same as "Change my answers" further down) ---
+    st.button("← Back to the questionnaire", on_click=back_to_form, key="back_top")
+
     # --- The predicted personality type ---
     html(f"""
-    <p class="reef-eyebrow">Step 2 of 2 · Your result</p>
+    <p class="reef-eyebrow" style="margin-top:14px">Step 2 of 2 · Your result</p>
     <div class="reef-hero pop" style="border-color:{info['color']}">
     <div style="display:flex; justify-content:center; align-items:center; height:170px">
     {fish_svg(prediction)}
@@ -720,7 +796,7 @@ else:
     <div class="reef-traits">{cards}</div>
     """)
 
-    st.button("Change my answers", on_click=back_to_form)
+    st.button("Change my answers", on_click=back_to_form, key="back_bottom")
 
     # --- The four personality types ---
     creatures = ""
@@ -742,7 +818,7 @@ else:
         </div>"""
     html(f"""
     <div style="margin:34px 0 6px"><span class="reef-h2" style="font-size:24px">The four personality types</span></div>
-    <p class="reef-soft" style="margin:0 0 14px">The share shows how much of the data each type covers.</p>
+    <p class="reef-soft" style="margin:0 0 14px">Each type is paired with a sea creature as its symbol, a small nod to the OCEAN model. The share shows how much of the data each type covers.</p>
     {creatures}
     """)
 
