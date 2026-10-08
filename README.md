@@ -175,7 +175,7 @@ In the VS Code terminal (or any terminal), with `(venv)` active and inside the p
 ```bash
 streamlit run app.py
 ```
-
+The same folder with the notebooks has to have a folder called .streamlit/ that contains the config.toml, so it has the ocean background of the app before it can run properly.   
 It opens at <http://localhost:8501>; if no browser window opens, copy that address into your
 browser. Stop the app with **Ctrl + C** in the terminal. If the app reports that no model was
 found, notebook 2 has not been run yet.
