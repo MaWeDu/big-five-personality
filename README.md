@@ -197,11 +197,9 @@ found, notebook 2 has not been run yet.
 ├── requirements.txt
 ├── .gitignore
 ├── app.py                                    # Streamlit app
-├── content.py                                 # App text and question content
+├── content.py                                # App text and question content
 ├── start.bat                                 # One-click Windows launcher
 ├── Start Personality Predictor.lnk           # Optional local Windows shortcut
-├── .streamlit/
-│   └── config.toml                           # Ocean theme configuration
 ├── assets/
 │   └── coast-hero.png
 ├── eda.ipynb                                 # Notebook 1: EDA and cleaning
@@ -210,13 +208,7 @@ found, notebook 2 has not been run yet.
     ├── 01_eda.py                             # Automated EDA and data cleaning
     ├── 02_train.py                           # Automated model training and export
     ├── run.py                                # Launcher workflow
-    ├── logo.ico                              # Optional shortcut icon
-    ├── .venv/                                # NOT committed; created by the launcher
-    ├── data/                                 # NOT committed; created by step 1
-    │   ├── data.csv
-    │   └── data_clean.csv
-    └── models/                               # NOT committed; created by step 2
-        └── personality_pipeline.joblib
+    └── logo.ico                              # Optional shortcut icon
 ```
 
 Neither the dataset nor the trained model is committed, as the project brief requires. Both
