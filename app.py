@@ -5,13 +5,28 @@ import joblib
 import pandas as pd
 from content import LIKERT, LONG_QUESTIONS, SHORT_QUESTIONS, TRAIT_META, UI, class_copy, ocean_scores
 
-ROOT=Path(__file__).parent; HERO_IMAGE=ROOT/'assets'/'coast-hero.png'
-MODEL_PATHS={'short':ROOT/'models'/'best_model.joblib','long':ROOT/'models'/'best_ocean_model.joblib'}
+ROOT = Path(__file__).parent
+HERO_IMAGE = ROOT / "assets" / "coast-hero.png"
+
+MODEL_PATHS = {
+    "short": (
+        ROOT / "src" / "models" / "personality_pipeline.joblib",
+        ROOT / "models" / "personality_pipeline.joblib",
+    ),
+    "long": (
+        ROOT / "src" / "models" / "best_ocean_model.joblib",
+        ROOT / "models" / "best_ocean_model.joblib",
+    ),
+}
+
 
 @st.cache_resource
 def model(test):
-    path=MODEL_PATHS[test]
-    return joblib.load(path) if path.exists() else None
+    for path in MODEL_PATHS[test]:
+        if path.is_file():
+            return joblib.load(path)
+
+    return None
 
 def css():
     image = base64.b64encode(HERO_IMAGE.read_bytes()).decode()
