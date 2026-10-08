@@ -13,25 +13,29 @@ def is_in_venv():
 
 
 def main():
-    # The project root is one level above the src folder.
-    base_dir = Path(__file__).resolve().parent.parent
+    # run.py, 01_eda.py and 02_train.py are in src.
     src_dir = Path(__file__).resolve().parent
-    venv_dir = base_dir / ".venv"
+
+    # app.py and requirements.txt are in the project root.
+    project_dir = src_dir.parent
+
+    # Keep the virtual environment, generated data and models in src.
+    venv_dir = src_dir / ".venv"
 
     if os.name == "nt":  # Windows
         venv_python = venv_dir / "Scripts" / "python.exe"
     else:  # macOS / Linux
         venv_python = venv_dir / "bin" / "python"
 
-    venv_exists = venv_python.exists()
-
+    # Create and use a virtual environment when needed.
     if not is_in_venv():
-        if not venv_exists:
+        if not venv_python.exists():
             print("----------------------------------------------------------------")
-            print(" Note: No virtual environment (venv) is currently active.")
+            print(" Note: No virtual environment is currently active.")
             print("----------------------------------------------------------------")
+
             choice = input(
-                "Create a virtual environment (.venv) in the project folder? [Y/n]: "
+                "Create a virtual environment in the src folder? [Y/n]: "
             ).strip().lower()
 
             if choice in ["", "y", "yes"]:
@@ -53,7 +57,7 @@ def main():
                         "pip",
                         "install",
                         "-r",
-                        str(base_dir / "requirements.txt"),
+                        str(project_dir / "requirements.txt"),
                     ],
                     check=True,
                 )
@@ -64,49 +68,67 @@ def main():
             print("----------------------------------------------------------------")
             print(" Starting the workflow in the virtual environment (.venv)...")
             print("----------------------------------------------------------------")
-            result = subprocess.run([str(venv_python)] + sys.argv)
+
+            try:
+                result = subprocess.run(
+                    [str(venv_python)] + sys.argv,
+                    cwd=src_dir,
+                )
+            except KeyboardInterrupt:
+                print("\nWorkflow stopped.")
+                return
+
             sys.exit(result.returncode)
 
     force_run = "--force" in sys.argv
 
+    # Generated files are stored inside src.
+    clean_data_path = src_dir / "data" / "data_clean.csv"
+    model_path = src_dir / "models" / "personality_pipeline.joblib"
+
     # Step 1: EDA and data cleaning
-    clean_data_path = base_dir / "DATA" / "data_clean.csv"
     if not clean_data_path.exists() or force_run:
         print("\n=== STEP 1: Starting EDA and data cleaning ===")
         subprocess.run(
             [sys.executable, str(src_dir / "01_eda.py")],
+            cwd=src_dir,
             check=True,
         )
     else:
-        print(
-            "\n=== STEP 1: Skipped "
-            "(cleaned data file 'data_clean.csv' already exists) ==="
-        )
+        print("\n=== STEP 1: Skipped (cleaned data already exists) ===")
 
     # Step 2: Model training and export
-    model_path = base_dir / "best_model.joblib"
     if not model_path.exists() or force_run:
         print("\n=== STEP 2: Starting model training, tuning, and export ===")
         subprocess.run(
             [sys.executable, str(src_dir / "02_train.py")],
+            cwd=src_dir,
             check=True,
         )
     else:
-        print(
-            "\n=== STEP 2: Skipped "
-            "(trained model file 'best_model.joblib' already exists) ==="
-        )
+        print("\n=== STEP 2: Skipped (trained model already exists) ===")
 
     # Step 3: Start the Streamlit app
     print("\n=== STEP 3: Starting the Streamlit app ===")
+
     env = os.environ.copy()
     env["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
 
-    subprocess.run(
-        [sys.executable, "-m", "streamlit", "run", str(base_dir / "app.py")],
-        env=env,
-        check=True,
-    )
+    try:
+        subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "streamlit",
+                "run",
+                str(project_dir / "app.py"),
+            ],
+            cwd=src_dir,
+            env=env,
+            check=True,
+        )
+    except KeyboardInterrupt:
+        print("\nStreamlit app stopped.")
 
 
 if __name__ == "__main__":
