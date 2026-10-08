@@ -141,8 +141,8 @@ In the same terminal, with `(venv)` shown and still in the project folder:
 pip install -r requirements.txt
 ```
 
-This installs the exact package versions we used (pandas, scikit-learn, CatBoost, Hyperopt,
-Streamlit, Jupyter, …) into the virtual environment. It takes a few minutes.
+This installs the exact package versions we used (pandas, seaborn, scikit-learn, CatBoost, Hyperopt,
+Streamlit, joblib, …) into the virtual environment. It takes a few minutes.
 
 ### Step 4: Run the notebooks in the virtual environment, in this order
 
