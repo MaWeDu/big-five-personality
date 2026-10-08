@@ -102,7 +102,7 @@ No Git? On the GitHub page, click **Code → Download ZIP** and unzip it.
 ### Step 1: Get the data
 
 The dataset is **not** in this repository, and you don't need to download it yourself:
-`eda.ipynb` (step 4) creates a `data/` folder and downloads the file into it.
+`eda.ipynb` (see below step 4) creates a `data/` folder and downloads the file into it.
 
 Alternative: download it from the project Drive folder and save it in the project as `data/data.csv`:
 
