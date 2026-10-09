@@ -180,11 +180,12 @@ It opens at <http://localhost:8501>; if no browser window opens, copy that addre
 browser. Stop the app with **Ctrl + C** in the terminal. If the app reports that no model was
 found, notebook 2 has not been run yet.
 
-### One more thing: one-click launch
+### One more thing: one-click launch<br>
+(Python need´s to be installed)
 
 > On Windows, there is an easier way.
 > Double-click `start.bat` in the project folder.<br>The optional **Start Personality Predictor** shortcut simply points to the same file.
-> <br> <br>
+> <br><br>
 > On its first run, the launcher creates `src/.venv`, installs the dependencies, prepares the data, trains the model, and starts the Streamlit app. Generated data and the trained model stay inside `src/`.
 >
 > After that, it is simply one click to return to the ocean.
