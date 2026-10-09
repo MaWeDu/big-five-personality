@@ -189,7 +189,9 @@ found, notebook 2 has not been run yet.
 >
 > After that, it is simply one click to return to the ocean.
 >
-> The manual steps above remain available## 3. Repository structure
+> The manual steps above remain available
+
+## 3. Repository structure
 
 ```text
 .
