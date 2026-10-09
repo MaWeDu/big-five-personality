@@ -183,7 +183,7 @@ found, notebook 2 has not been run yet.
 ### One more thing: one-click launch
 
 > On Windows, there is an easier way.
-> Double-click `start.bat` in the project folder. The optional **Start Personality Predictor** shortcut simply points to the same file.
+> Double-click `start.bat` in the project folder.<br>The optional **Start Personality Predictor** shortcut simply points to the same file.
 > <br>
 > On its first run, the launcher creates `src/.venv`, installs the dependencies, prepares the data, trains the model, and starts the Streamlit app. Generated data and the trained model stay inside `src/`.
 >
